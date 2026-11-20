@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  market-data-engine:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: hermes-market-data:isolated
+    container_name: hermes-market-engine-isolated
+    user: "1002:1002"
+    command: ["service_runner.py"]
+    read_only: true
+    tmpfs:
+      - /tmp:size=64M,mode=1777
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    volumes:
+      # Montaggio in SOLA LETTURA rigorosa per gli archivi storici
+      - /home/lucasguotti/docker/hermes-replica/data/trading-office-data:/app/readonly_archives/btc:ro
+      - /home/lucasguotti/docker/hermes-replica/data/profiles/linu/workspace/eth-history:/app/readonly_archives/eth:ro
+      # Volume dedicato esclusivo per staging con permessi 0700 di uid 1002
+      - market-staging-data:/app/staging:rw
+    networks:
+      - market-egress-net
+    restart: "no"
+
+networks:
+  market-egress-net:
+    driver: bridge
+    # Rete ristretta con egress controllato verso le sole API pubbliche
+    internal: false
+
+volumes:
+  market-staging-data:
+    driver: local

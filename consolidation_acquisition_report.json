@@ -1,0 +1,52 @@
+{
+  "timestamp_utc": "2026-11-18T13:43:37.488423+00:00",
+  "cutoff_ts": 1795009417,
+  "cutoff_utc": "2026-11-18T13:43:37+00:00",
+  "products_processed": {
+    "BTC-EUR": {
+      "product": "BTC-EUR",
+      "batch_requested_slots": 4,
+      "bars_acquired_verified": 0,
+      "acquired_sample": [],
+      "initial_gap_count": 42,
+      "remaining_gap_count": 42,
+      "original_archive_untouched": true
+    },
+    "ETH-EUR": {
+      "product": "ETH-EUR",
+      "batch_requested_slots": 4,
+      "bars_acquired_verified": 0,
+      "acquired_sample": [],
+      "initial_gap_count": 39,
+      "remaining_gap_count": 39,
+      "original_archive_untouched": true
+    },
+    "ADA-EUR": {
+      "product": "ADA-EUR",
+      "batch_requested_slots": 4,
+      "bars_acquired_verified": 0,
+      "acquired_sample": [],
+      "initial_gap_count": 720,
+      "remaining_gap_count": 720,
+      "original_archive_untouched": true
+    },
+    "LINK-EUR": {
+      "product": "LINK-EUR",
+      "batch_requested_slots": 4,
+      "bars_acquired_verified": 0,
+      "acquired_sample": [],
+      "initial_gap_count": 720,
+      "remaining_gap_count": 720,
+      "original_archive_untouched": true
+    },
+    "LTC-EUR": {
+      "product": "LTC-EUR",
+      "batch_requested_slots": 4,
+      "bars_acquired_verified": 0,
+      "acquired_sample": [],
+      "initial_gap_count": 720,
+      "remaining_gap_count": 720,
+      "original_archive_untouched": true
+    }
+  }
+}

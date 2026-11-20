@@ -1,0 +1,15 @@
+{
+  "report_generated_utc": "2026-11-18T21:25:41.521841+00:00",
+  "methodology_version": "METHODOLOGY_V1_FROZEN",
+  "cycles_recorded_count": 3,
+  "data_integrity": "VALIDATED",
+  "benchmark_comparison": "NEUTRAL_DEFENSIVE",
+  "bear_analyst_contribution": "ACTIVE_RISK_WARNINGS_DOCUMENTED",
+  "director_conclusion": "HOLD / NO_TRADE_EXECUTION_PERMITTED",
+  "security_gates": {
+    "risk_engine": "DENY",
+    "paper_trading": "DISABLED",
+    "real_trading": "DISABLED",
+    "mcp_private_portfolio": "RESTRICTED_ON_DEMAND_ONLY"
+  }
+}

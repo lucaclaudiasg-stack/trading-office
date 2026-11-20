@@ -1,0 +1,11 @@
+{
+  "e2e_integration.py": "53262f4be4c2e005882bc8b01c1abced948f380b53057fb710965d2ca3b08953",
+  "exploratory_top20.py": "58e4289ccf29bb9887c25743b322528f136a0e94203b72aa7ef48a766e76d8bb",
+  "multi_currency_history.py": "92083c09981bc4a4e867fa397a1d2b973f61ee9268e9cab89c02177bf650cf3e",
+  "analyst_exploratory_bridge.py": "8ee56b1a8e563d312f3faded01118b54bb5bee131c2f1e8b71c9d7793471a3a4",
+  "test_exploratory_and_pipeline.py": "e6a96a9166df408819b5966a0824551906f7012cf28f8792da70d1fe5db7838c",
+  "persistent_staging.py": "864816eb854891afe819feba2aca0e7f1af9a25d0fcb4f3df53a3bd9382e84a3",
+  "test_persistence_lifecycle.py": "d494af5de0e8e9015652ccfd42a59bca78207ab96ae2753d0ee7f45b5197ee4b",
+  "ISOLATION_PLAN.md": "a0c662a68eb14ee2e1d37bfdae8b6e161dbb7fd22a1b275dd889affab6131c46",
+  "E2E_REPORT.md": "8c1710469ffb61dee67ed8fb7eea4776e6d3dda24b94278d0f1f8555f18d1fcc"
+}

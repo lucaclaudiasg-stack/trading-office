@@ -1,0 +1,32 @@
+{
+  "audit_timestamp_utc": "2026-11-19T05:56:38.631379+00:00",
+  "target_session_id": "DEBATE-REAL-1795067585",
+  "findings": {
+    "1_llm_calls_verification": {
+      "status": "PASS",
+      "evidence": "7 specialist invocations dispatched via fan-out (proc_a157174c6cff) with unique delivery IDs + Trading Director synthesis (proc_748221276633)."
+    },
+    "2_portfolio_hold_vs_no_new_exposure_vs_defensive_cash": {
+      "status": "REFINEMENT_NOTED",
+      "detail": "La sessione ha trattato 'Defensive Cash' come sinonimo di astensione da nuove esposizioni. Correzione metodologica: distinguere esplicitamente HOLD del portafoglio esistente (BTC/ETH gi\u00e0 detenuti) da NO NEW EXPOSURE e da posizionamento attivo in liquidit\u00e0 EUR."
+    },
+    "3_ev_negative_quant_evidence": {
+      "status": "RECLASSIFIED",
+      "detail": "L'affermazione EV < 0 formulata dal Quant Researcher viene formalmente riclassificata come 'ipotesi quantitativa derivata da stima di rischio/rendimento in regime di alta volatilit\u00e0, non pienamente dimostrata da backtest formale out-of-sample'."
+    },
+    "4_execution_costs_break_even": {
+      "status": "PASS",
+      "detail": "Il calcolo dei costi (spread 1.2-5.4 bps + commissioni taker ~0.80%-1.20% round-trip) \u00e8 risultato matematicamente corretto, dimostrando che l'attrito assorbe tra il 38% e il 58% del budget di rischio settimanale di 3 EUR."
+    },
+    "5_bear_analyst_independence_and_future_directive": {
+      "status": "CORRECTION_APPLIED",
+      "detail": "Il Bear Analyst ha presentato una controtesi indipendente (trappola dell'ipervenduto). Nuova regola metodologica permanente: nelle prossime riunioni, il Bear Analyst dovr\u00e0 contestare attivamente anche le strategie difensive (es. costo opportunit\u00e0 del cash in caso di rimbalzo violento o inflazione/FX)."
+    }
+  },
+  "security_gates": {
+    "risk_engine": "DENY",
+    "paper_trading": "DISABLED",
+    "real_trading": "DISABLED",
+    "coinbase_mcp": "READ_ONLY"
+  }
+}

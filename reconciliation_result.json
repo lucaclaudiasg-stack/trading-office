@@ -1,0 +1,155 @@
+{
+  "PORTFOLIO_RECONCILIATION": "PASS",
+  "VALUED_ASSETS": 1,
+  "UNVALUED_ASSETS": 12,
+  "PARTIAL_PORTFOLIO_VALUE_EUR": "2.53",
+  "TOTAL_PORTFOLIO_VALUE_EUR": "NOT_AVAILABLE",
+  "WEIGHTS_VALIDATION": "PASS",
+  "TOP20_CLASSIFICATION": "FAIL",
+  "sum_weights_percent": "100.00",
+  "holdings": [
+    {
+      "asset": "EUR",
+      "balance": "2.53",
+      "price_eur": "1.0",
+      "timestamp": "2026-11-18T20:40:02.445328+00:00",
+      "value_eur_dec": "2.530",
+      "status": "VERIFIED",
+      "classification": "LIQUIDITY_BASE",
+      "value_eur": "2.53",
+      "weight_percent": "100.00"
+    },
+    {
+      "asset": "BTC",
+      "balance": "0.00181225",
+      "price_eur": "VALUATION_UNAVAILABLE",
+      "timestamp": "N/D",
+      "value_eur_dec": null,
+      "status": "VALUATION_UNAVAILABLE",
+      "classification": "OUTSIDE_TOP20",
+      "value_eur": "N/D",
+      "weight_percent": "N/D"
+    },
+    {
+      "asset": "ETH",
+      "balance": "0.02084170",
+      "price_eur": "VALUATION_UNAVAILABLE",
+      "timestamp": "N/D",
+      "value_eur_dec": null,
+      "status": "VALUATION_UNAVAILABLE",
+      "classification": "OUTSIDE_TOP20",
+      "value_eur": "N/D",
+      "weight_percent": "N/D"
+    },
+    {
+      "asset": "XLM",
+      "balance": "26.46842900",
+      "price_eur": "VALUATION_UNAVAILABLE",
+      "timestamp": "N/D",
+      "value_eur_dec": null,
+      "status": "VALUATION_UNAVAILABLE",
+      "classification": "OUTSIDE_TOP20",
+      "value_eur": "N/D",
+      "weight_percent": "N/D"
+    },
+    {
+      "asset": "GRT",
+      "balance": "3.95726156",
+      "price_eur": "VALUATION_UNAVAILABLE",
+      "timestamp": "N/D",
+      "value_eur_dec": null,
+      "status": "VALUATION_UNAVAILABLE",
+      "classification": "OUTSIDE_TOP20",
+      "value_eur": "N/D",
+      "weight_percent": "N/D"
+    },
+    {
+      "asset": "FET",
+      "balance": "5.33808673",
+      "price_eur": "VALUATION_UNAVAILABLE",
+      "timestamp": "N/D",
+      "value_eur_dec": null,
+      "status": "VALUATION_UNAVAILABLE",
+      "classification": "OUTSIDE_TOP20",
+      "value_eur": "N/D",
+      "weight_percent": "N/D"
+    },
+    {
+      "asset": "AMP",
+      "balance": "46.76313466",
+      "price_eur": "VALUATION_UNAVAILABLE",
+      "timestamp": "N/D",
+      "value_eur_dec": null,
+      "status": "VALUATION_UNAVAILABLE",
+      "classification": "OUTSIDE_TOP20",
+      "value_eur": "N/D",
+      "weight_percent": "N/D"
+    },
+    {
+      "asset": "NKN",
+      "balance": "41.61004336",
+      "price_eur": "VALUATION_UNAVAILABLE",
+      "timestamp": "N/D",
+      "value_eur_dec": null,
+      "status": "VALUATION_UNAVAILABLE",
+      "classification": "OUTSIDE_TOP20",
+      "value_eur": "N/D",
+      "weight_percent": "N/D"
+    },
+    {
+      "asset": "ENJ",
+      "balance": "18.78598323",
+      "price_eur": "VALUATION_UNAVAILABLE",
+      "timestamp": "N/D",
+      "value_eur_dec": null,
+      "status": "VALUATION_UNAVAILABLE",
+      "classification": "OUTSIDE_TOP20",
+      "value_eur": "N/D",
+      "weight_percent": "N/D"
+    },
+    {
+      "asset": "RLY",
+      "balance": "4.49281187",
+      "price_eur": "VALUATION_UNAVAILABLE",
+      "timestamp": "N/D",
+      "value_eur_dec": null,
+      "status": "VALUATION_UNAVAILABLE",
+      "classification": "OUTSIDE_TOP20",
+      "value_eur": "N/D",
+      "weight_percent": "N/D"
+    },
+    {
+      "asset": "ALEO",
+      "balance": "3.44976500",
+      "price_eur": "VALUATION_UNAVAILABLE",
+      "timestamp": "N/D",
+      "value_eur_dec": null,
+      "status": "VALUATION_UNAVAILABLE",
+      "classification": "OUTSIDE_TOP20",
+      "value_eur": "N/D",
+      "weight_percent": "N/D"
+    },
+    {
+      "asset": "COMP",
+      "balance": "0.02061009",
+      "price_eur": "VALUATION_UNAVAILABLE",
+      "timestamp": "N/D",
+      "value_eur_dec": null,
+      "status": "VALUATION_UNAVAILABLE",
+      "classification": "OUTSIDE_TOP20",
+      "value_eur": "N/D",
+      "weight_percent": "N/D"
+    },
+    {
+      "asset": "CLV",
+      "balance": "1.96078431",
+      "price_eur": "VALUATION_UNAVAILABLE",
+      "timestamp": "N/D",
+      "value_eur_dec": null,
+      "status": "VALUATION_UNAVAILABLE",
+      "classification": "OUTSIDE_TOP20",
+      "value_eur": "N/D",
+      "weight_percent": "N/D"
+    }
+  ]
+}

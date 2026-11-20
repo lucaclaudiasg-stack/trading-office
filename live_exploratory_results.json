@@ -1,0 +1,815 @@
+{
+  "scan_timestamp_utc": "2026-11-18T13:38:48.965913+00:00",
+  "pairs_discovered_total": 33,
+  "pairs_scanned_sample": 25,
+  "top20_ranking": {
+    "generated_utc": "2026-11-18T13:38:48.963937+00:00",
+    "unsupported_or_insufficient_count": 0,
+    "eligible_count": 25,
+    "top20_count": 20,
+    "classification_policy": "EXPLORATORY_ONLY \u2014 Strictly prohibited for operational order execution",
+    "top20": [
+      {
+        "product": "BTC-EUR",
+        "tier": "EXPLORATORY",
+        "tier_reason": "stats endpoint lacks source timestamp (asynchronous fetch envelope); historical 720h hourly candles status: VERIFIED_READONLY",
+        "operational_permission": "ANALYSIS_ONLY (No trade authorization allowed)",
+        "metrics": {
+          "last_price_eur": 58349.65,
+          "spread_bps": 2.66,
+          "volume_base_24h": 299.09965111,
+          "volume_eur_proxy_24h": 17452359.96,
+          "depth_bid_1pct_eur": 1502310.68,
+          "depth_ask_1pct_eur": 3205035.09,
+          "depth_total_1pct_eur": 4707345.77,
+          "score": 5.225557
+        },
+        "timestamps": {
+          "book_source_time": "2026-11-18T13:38:34.091427474Z",
+          "stats_source_time": null,
+          "fetch_skew_s": 0.457,
+          "fetch_age_s": 0.457
+        },
+        "rank": 1
+      },
+      {
+        "product": "ETH-EUR",
+        "tier": "EXPLORATORY",
+        "tier_reason": "stats endpoint lacks source timestamp (asynchronous fetch envelope); historical 720h hourly candles status: VERIFIED_READONLY",
+        "operational_permission": "ANALYSIS_ONLY (No trade authorization allowed)",
+        "metrics": {
+          "last_price_eur": 1634.57,
+          "spread_bps": 2.26,
+          "volume_base_24h": 3057.89155022,
+          "volume_eur_proxy_24h": 4998337.79,
+          "depth_bid_1pct_eur": 633495.76,
+          "depth_ask_1pct_eur": 585207.92,
+          "depth_total_1pct_eur": 1218703.68,
+          "score": 4.80394
+        },
+        "timestamps": {
+          "book_source_time": "2026-11-18T13:38:42.455664989Z",
+          "stats_source_time": null,
+          "fetch_skew_s": 0.568,
+          "fetch_age_s": 0.568
+        },
+        "rank": 2
+      },
+      {
+        "product": "ADA-EUR",
+        "tier": "EXPLORATORY",
+        "tier_reason": "stats endpoint lacks source timestamp (asynchronous fetch envelope); historical 720h hourly candles status: missing",
+        "operational_permission": "ANALYSIS_ONLY (No trade authorization allowed)",
+        "metrics": {
+          "last_price_eur": 0.14042,
+          "spread_bps": 4.98,
+          "volume_base_24h": 1737707.03,
+          "volume_eur_proxy_24h": 244008.82,
+          "depth_bid_1pct_eur": 33126.69,
+          "depth_ask_1pct_eur": 29434.06,
+          "depth_total_1pct_eur": 62560.76,
+          "score": 3.821219
+        },
+        "timestamps": {
+          "book_source_time": "2026-11-18T13:38:28.994209031Z",
+          "stats_source_time": null,
+          "fetch_skew_s": 0.663,
+          "fetch_age_s": 0.663
+        },
+        "rank": 3
+      },
+      {
+        "product": "LINK-EUR",
+        "tier": "EXPLORATORY",
+        "tier_reason": "stats endpoint lacks source timestamp (asynchronous fetch envelope); historical 720h hourly candles status: missing",
+        "operational_permission": "ANALYSIS_ONLY (No trade authorization allowed)",
+        "metrics": {
+          "last_price_eur": 8.34937,
+          "spread_bps": 13.82,
+          "volume_base_24h": 12762.38,
+          "volume_eur_proxy_24h": 106557.83,
+          "depth_bid_1pct_eur": 32495.12,
+          "depth_ask_1pct_eur": 52468.13,
+          "depth_total_1pct_eur": 84963.25,
+          "score": 3.701715
+        },
+        "timestamps": {
+          "book_source_time": "2026-11-18T13:38:44.871981571Z",
+          "stats_source_time": null,
+          "fetch_skew_s": 0.548,
+          "fetch_age_s": 0.549
+        },
+        "rank": 4
+      },
+      {
+        "product": "LTC-EUR",
+        "tier": "EXPLORATORY",
+        "tier_reason": "stats endpoint lacks source timestamp (asynchronous fetch envelope); historical 720h hourly candles status: missing",
+        "operational_permission": "ANALYSIS_ONLY (No trade authorization allowed)",
+        "metrics": {
+          "last_price_eur": 40.409,
+          "spread_bps": 9.89,
+          "volume_base_24h": 3543.7849434,
+          "volume_eur_proxy_24h": 143200.81,
+          "depth_bid_1pct_eur": 8648.49,
+          "depth_ask_1pct_eur": 36139.36,
+          "depth_total_1pct_eur": 44787.85,
+          "score": 3.665552
+        },
+        "timestamps": {
+          "book_source_time": "2026-11-18T13:38:45.129865747Z",
+          "stats_source_time": null,
+          "fetch_skew_s": 0.536,
+          "fetch_age_s": 0.536
+        },
+        "rank": 5
+      },
+      {
+        "product": "DOT-EUR",
+        "tier": "EXPLORATORY",
+        "tier_reason": "stats endpoint lacks source timestamp (asynchronous fetch envelope); historical 720h hourly candles status: missing",
+        "operational_permission": "ANALYSIS_ONLY (No trade authorization allowed)",
+        "metrics": {
+          "last_price_eur": 0.665,
+          "spread_bps": 7.53,
+          "volume_base_24h": 306278.009,
+          "volume_eur_proxy_24h": 203674.88,
+          "depth_bid_1pct_eur": 21122.71,
+          "depth_ask_1pct_eur": 7131.81,
+          "depth_total_1pct_eur": 28254.52,
+          "score": 3.662647
+        },
+        "timestamps": {
+          "book_source_time": "2026-11-18T13:38:37.369381204Z",
+          "stats_source_time": null,
+          "fetch_skew_s": 0.541,
+          "fetch_age_s": 0.541
+        },
+        "rank": 6
+      },
+      {
+        "product": "ALGO-EUR",
+        "tier": "EXPLORATORY",
+        "tier_reason": "stats endpoint lacks source timestamp (asynchronous fetch envelope); historical 720h hourly candles status: missing",
+        "operational_permission": "ANALYSIS_ONLY (No trade authorization allowed)",
+        "metrics": {
+          "last_price_eur": 0.07184,
+          "spread_bps": 8.35,
+          "volume_base_24h": 4646672.0,
+          "volume_eur_proxy_24h": 333816.92,
+          "depth_bid_1pct_eur": 9910.05,
+          "depth_ask_1pct_eur": 5829.83,
+          "depth_total_1pct_eur": 15739.88,
+          "score": 3.657499
+        },
+        "timestamps": {
+          "book_source_time": "2026-11-18T13:38:30.258734391Z",
+          "stats_source_time": null,
+          "fetch_skew_s": 0.663,
+          "fetch_age_s": 0.663
+        },
+        "rank": 7
+      },
+      {
+        "product": "AVAX-EUR",
+        "tier": "EXPLORATORY",
+        "tier_reason": "stats endpoint lacks source timestamp (asynchronous fetch envelope); historical 720h hourly candles status: missing",
+        "operational_permission": "ANALYSIS_ONLY (No trade authorization allowed)",
+        "metrics": {
+          "last_price_eur": 6.494,
+          "spread_bps": 12.32,
+          "volume_base_24h": 6474.491,
+          "volume_eur_proxy_24h": 42045.34,
+          "depth_bid_1pct_eur": 52991.99,
+          "depth_ask_1pct_eur": 20733.87,
+          "depth_total_1pct_eur": 73725.86,
+          "score": 3.522358
+        },
+        "timestamps": {
+          "book_source_time": "2026-11-18T13:38:30.621153430Z",
+          "stats_source_time": null,
+          "fetch_skew_s": 0.543,
+          "fetch_age_s": 0.543
+        },
+        "rank": 8
+      },
+      {
+        "product": "DOGE-EUR",
+        "tier": "EXPLORATORY",
+        "tier_reason": "stats endpoint lacks source timestamp (asynchronous fetch envelope); historical 720h hourly candles status: missing",
+        "operational_permission": "ANALYSIS_ONLY (No trade authorization allowed)",
+        "metrics": {
+          "last_price_eur": 0.05408,
+          "spread_bps": 14.77,
+          "volume_base_24h": 1686895.4,
+          "volume_eur_proxy_24h": 91227.3,
+          "depth_bid_1pct_eur": 19646.34,
+          "depth_ask_1pct_eur": 9497.31,
+          "depth_total_1pct_eur": 29143.65,
+          "score": 3.509713
+        },
+        "timestamps": {
+          "book_source_time": "2026-11-18T13:38:38.362149689Z",
+          "stats_source_time": null,
+          "fetch_skew_s": 0.655,
+          "fetch_age_s": 0.655
+        },
+        "rank": 9
+      },
+      {
+        "product": "1INCH-EUR",
+        "tier": "EXPLORATORY",
+        "tier_reason": "stats endpoint lacks source timestamp (asynchronous fetch envelope); historical 720h hourly candles status: missing",
+        "operational_permission": "ANALYSIS_ONLY (No trade authorization allowed)",
+        "metrics": {
+          "last_price_eur": 0.06119,
+          "spread_bps": 12.99,
+          "volume_base_24h": 703622.39,
+          "volume_eur_proxy_24h": 43054.65,
+          "depth_bid_1pct_eur": 20408.95,
+          "depth_ask_1pct_eur": 15665.92,
+          "depth_total_1pct_eur": 36074.87,
+          "score": 3.41616
+        },
+        "timestamps": {
+          "book_source_time": "2026-11-18T13:38:08.692539638Z",
+          "stats_source_time": null,
+          "fetch_skew_s": 0.566,
+          "fetch_age_s": 0.566
+        },
+        "rank": 10
+      },
+      {
+        "product": "ICP-EUR",
+        "tier": "EXPLORATORY",
+        "tier_reason": "stats endpoint lacks source timestamp (asynchronous fetch envelope); historical 720h hourly candles status: missing",
+        "operational_permission": "ANALYSIS_ONLY (No trade authorization allowed)",
+        "metrics": {
+          "last_price_eur": 2.037,
+          "spread_bps": 9.82,
+          "volume_base_24h": 34889.3062,
+          "volume_eur_proxy_24h": 71069.52,
+          "depth_bid_1pct_eur": 12760.29,
+          "depth_ask_1pct_eur": 3303.22,
+          "depth_total_1pct_eur": 16063.51,
+          "score": 3.388171
+        },
+        "timestamps": {
+          "book_source_time": "2026-11-18T13:38:35.479685757Z",
+          "stats_source_time": null,
+          "fetch_skew_s": 0.589,
+          "fetch_age_s": 0.589
+        },
+        "rank": 11
+      },
+      {
+        "product": "CRV-EUR",
+        "tier": "EXPLORATORY",
+        "tier_reason": "stats endpoint lacks source timestamp (asynchronous fetch envelope); historical 720h hourly candles status: missing",
+        "operational_permission": "ANALYSIS_ONLY (No trade authorization allowed)",
+        "metrics": {
+          "last_price_eur": 0.1865,
+          "spread_bps": 16.04,
+          "volume_base_24h": 226213.3,
+          "volume_eur_proxy_24h": 42188.78,
+          "depth_bid_1pct_eur": 12524.01,
+          "depth_ask_1pct_eur": 5354.84,
+          "depth_total_1pct_eur": 17878.85,
+          "score": 3.298314
+        },
+        "timestamps": {
+          "book_source_time": "2026-11-18T13:38:35.576623404Z",
+          "stats_source_time": null,
+          "fetch_skew_s": 0.531,
+          "fetch_age_s": 0.531
+        },
+        "rank": 12
+      },
+      {
+        "product": "BCH-EUR",
+        "tier": "EXPLORATORY",
+        "tier_reason": "stats endpoint lacks source timestamp (asynchronous fetch envelope); historical 720h hourly candles status: missing",
+        "operational_permission": "ANALYSIS_ONLY (No trade authorization allowed)",
+        "metrics": {
+          "last_price_eur": 189.67,
+          "spread_bps": 12.6,
+          "volume_base_24h": 227.90535609,
+          "volume_eur_proxy_24h": 43226.81,
+          "depth_bid_1pct_eur": 8528.74,
+          "depth_ask_1pct_eur": 3263.93,
+          "depth_total_1pct_eur": 11792.67,
+          "score": 3.247873
+        },
+        "timestamps": {
+          "book_source_time": "2026-11-18T13:38:33.384584387Z",
+          "stats_source_time": null,
+          "fetch_skew_s": 0.426,
+          "fetch_age_s": 0.426
+        },
+        "rank": 13
+      },
+      {
+        "product": "SHIB-EUR",
+        "tier": "EXPLORATORY",
+        "tier_reason": "stats endpoint lacks source timestamp (asynchronous fetch envelope); historical 720h hourly candles status: missing",
+        "operational_permission": "ANALYSIS_ONLY (No trade authorization allowed)",
+        "metrics": {
+          "last_price_eur": 3.5e-06,
+          "spread_bps": 28.53,
+          "volume_base_24h": 6069812596.0,
+          "volume_eur_proxy_24h": 21244.34,
+          "depth_bid_1pct_eur": 18593.04,
+          "depth_ask_1pct_eur": 10475.35,
+          "depth_total_1pct_eur": 29068.39,
+          "score": 3.221781
+        },
+        "timestamps": {
+          "book_source_time": "2026-11-18T13:38:35.071860170Z",
+          "stats_source_time": null,
+          "fetch_skew_s": 0.556,
+          "fetch_age_s": 0.556
+        },
+        "rank": 14
+      },
+      {
+        "product": "BAT-EUR",
+        "tier": "EXPLORATORY",
+        "tier_reason": "stats endpoint lacks source timestamp (asynchronous fetch envelope); historical 720h hourly candles status: missing",
+        "operational_permission": "ANALYSIS_ONLY (No trade authorization allowed)",
+        "metrics": {
+          "last_price_eur": 0.08663,
+          "spread_bps": 6.94,
+          "volume_base_24h": 1114494.45,
+          "volume_eur_proxy_24h": 96548.65,
+          "depth_bid_1pct_eur": 1169.67,
+          "depth_ask_1pct_eur": 1167.89,
+          "depth_total_1pct_eur": 2337.57,
+          "score": 3.155676
+        },
+        "timestamps": {
+          "book_source_time": "2026-11-18T13:38:33.199488193Z",
+          "stats_source_time": null,
+          "fetch_skew_s": 0.541,
+          "fetch_age_s": 0.541
+        },
+        "rank": 15
+      },
+      {
+        "product": "ATOM-EUR",
+        "tier": "EXPLORATORY",
+        "tier_reason": "stats endpoint lacks source timestamp (asynchronous fetch envelope); historical 720h hourly candles status: missing",
+        "operational_permission": "ANALYSIS_ONLY (No trade authorization allowed)",
+        "metrics": {
+          "last_price_eur": 1.1805,
+          "spread_bps": 7.62,
+          "volume_base_24h": 37321.826,
+          "volume_eur_proxy_24h": 44058.42,
+          "depth_bid_1pct_eur": 2180.72,
+          "depth_ask_1pct_eur": 2750.33,
+          "depth_total_1pct_eur": 4931.06,
+          "score": 3.131116
+        },
+        "timestamps": {
+          "book_source_time": "2026-11-18T13:38:29.526843288Z",
+          "stats_source_time": null,
+          "fetch_skew_s": 0.452,
+          "fetch_age_s": 0.452
+        },
+        "rank": 16
+      },
+      {
+        "product": "GRT-EUR",
+        "tier": "EXPLORATORY",
+        "tier_reason": "stats endpoint lacks source timestamp (asynchronous fetch envelope); historical 720h hourly candles status: missing",
+        "operational_permission": "ANALYSIS_ONLY (No trade authorization allowed)",
+        "metrics": {
+          "last_price_eur": 0.015766,
+          "spread_bps": 18.39,
+          "volume_base_24h": 771691.43,
+          "volume_eur_proxy_24h": 12166.49,
+          "depth_bid_1pct_eur": 7919.46,
+          "depth_ask_1pct_eur": 5176.97,
+          "depth_total_1pct_eur": 13096.43,
+          "score": 3.029121
+        },
+        "timestamps": {
+          "book_source_time": "2026-11-18T13:38:43.549227159Z",
+          "stats_source_time": null,
+          "fetch_skew_s": 0.548,
+          "fetch_age_s": 0.548
+        },
+        "rank": 17
+      },
+      {
+        "product": "MANA-EUR",
+        "tier": "EXPLORATORY",
+        "tier_reason": "stats endpoint lacks source timestamp (asynchronous fetch envelope); historical 720h hourly candles status: missing",
+        "operational_permission": "ANALYSIS_ONLY (No trade authorization allowed)",
+        "metrics": {
+          "last_price_eur": 0.0558,
+          "spread_bps": 16.1,
+          "volume_base_24h": 246638.37,
+          "volume_eur_proxy_24h": 13762.42,
+          "depth_bid_1pct_eur": 7734.33,
+          "depth_ask_1pct_eur": 3191.61,
+          "depth_total_1pct_eur": 10925.94,
+          "score": 3.028711
+        },
+        "timestamps": {
+          "book_source_time": "2026-11-18T13:38:44.331539470Z",
+          "stats_source_time": null,
+          "fetch_skew_s": 0.53,
+          "fetch_age_s": 0.53
+        },
+        "rank": 18
+      },
+      {
+        "product": "FIL-EUR",
+        "tier": "EXPLORATORY",
+        "tier_reason": "stats endpoint lacks source timestamp (asynchronous fetch envelope); historical 720h hourly candles status: missing",
+        "operational_permission": "ANALYSIS_ONLY (No trade authorization allowed)",
+        "metrics": {
+          "last_price_eur": 0.5403,
+          "spread_bps": 58.9,
+          "volume_base_24h": 37154.353,
+          "volume_eur_proxy_24h": 20074.5,
+          "depth_bid_1pct_eur": 4110.34,
+          "depth_ask_1pct_eur": 2959.75,
+          "depth_total_1pct_eur": 7070.1,
+          "score": 2.921139
+        },
+        "timestamps": {
+          "book_source_time": "2026-11-18T13:38:42.847627194Z",
+          "stats_source_time": null,
+          "fetch_skew_s": 0.534,
+          "fetch_age_s": 0.534
+        },
+        "rank": 19
+      },
+      {
+        "product": "AAVE-EUR",
+        "tier": "EXPLORATORY",
+        "tier_reason": "stats endpoint lacks source timestamp (asynchronous fetch envelope); historical 720h hourly candles status: missing",
+        "operational_permission": "ANALYSIS_ONLY (No trade authorization allowed)",
+        "metrics": {
+          "last_price_eur": 101.07,
+          "spread_bps": 50.53,
+          "volume_base_24h": 76.657,
+          "volume_eur_proxy_24h": 7747.72,
+          "depth_bid_1pct_eur": 11879.23,
+          "depth_ask_1pct_eur": 4483.29,
+          "depth_total_1pct_eur": 16362.52,
+          "score": 2.90423
+        },
+        "timestamps": {
+          "book_source_time": "2026-11-18T13:37:29.177698810Z",
+          "stats_source_time": null,
+          "fetch_skew_s": 0.536,
+          "fetch_age_s": 0.536
+        },
+        "rank": 20
+      }
+    ],
+    "insufficient_samples": []
+  },
+  "gap_planner_top5": {
+    "BTC-EUR": {
+      "product": "BTC-EUR",
+      "window_start_utc": "2026-10-19T13:00:00+00:00",
+      "window_end_utc": "2026-11-18T13:00:00+00:00",
+      "expected_total": 720,
+      "existing_count": 678,
+      "missing_count": 42,
+      "coverage_pct": 94.17,
+      "missing_slots_sample": [
+        1794855600,
+        1794859200,
+        1794862800,
+        1794866400,
+        1794870000,
+        1794873600,
+        1794877200,
+        1794880800,
+        1794884400,
+        1794888000
+      ],
+      "requires_incremental_fetch": true,
+      "bounded_batch_recommended_size": 4
+    },
+    "ETH-EUR": {
+      "product": "ETH-EUR",
+      "window_start_utc": "2026-10-19T13:00:00+00:00",
+      "window_end_utc": "2026-11-18T13:00:00+00:00",
+      "expected_total": 720,
+      "existing_count": 681,
+      "missing_count": 39,
+      "coverage_pct": 94.58,
+      "missing_slots_sample": [
+        1794866400,
+        1794870000,
+        1794873600,
+        1794877200,
+        1794880800,
+        1794884400,
+        1794888000,
+        1794891600,
+        1794895200,
+        1794898800
+      ],
+      "requires_incremental_fetch": true,
+      "bounded_batch_recommended_size": 4
+    },
+    "ADA-EUR": {
+      "product": "ADA-EUR",
+      "window_start_utc": "2026-10-19T13:00:00+00:00",
+      "window_end_utc": "2026-11-18T13:00:00+00:00",
+      "expected_total": 720,
+      "existing_count": 0,
+      "missing_count": 720,
+      "coverage_pct": 0.0,
+      "missing_slots_sample": [
+        1792414800,
+        1792418400,
+        1792422000,
+        1792425600,
+        1792429200,
+        1792432800,
+        1792436400,
+        1792440000,
+        1792443600,
+        1792447200
+      ],
+      "requires_incremental_fetch": true,
+      "bounded_batch_recommended_size": 4
+    },
+    "LINK-EUR": {
+      "product": "LINK-EUR",
+      "window_start_utc": "2026-10-19T13:00:00+00:00",
+      "window_end_utc": "2026-11-18T13:00:00+00:00",
+      "expected_total": 720,
+      "existing_count": 0,
+      "missing_count": 720,
+      "coverage_pct": 0.0,
+      "missing_slots_sample": [
+        1792414800,
+        1792418400,
+        1792422000,
+        1792425600,
+        1792429200,
+        1792432800,
+        1792436400,
+        1792440000,
+        1792443600,
+        1792447200
+      ],
+      "requires_incremental_fetch": true,
+      "bounded_batch_recommended_size": 4
+    },
+    "LTC-EUR": {
+      "product": "LTC-EUR",
+      "window_start_utc": "2026-10-19T13:00:00+00:00",
+      "window_end_utc": "2026-11-18T13:00:00+00:00",
+      "expected_total": 720,
+      "existing_count": 0,
+      "missing_count": 720,
+      "coverage_pct": 0.0,
+      "missing_slots_sample": [
+        1792414800,
+        1792418400,
+        1792422000,
+        1792425600,
+        1792429200,
+        1792432800,
+        1792436400,
+        1792440000,
+        1792443600,
+        1792447200
+      ],
+      "requires_incremental_fetch": true,
+      "bounded_batch_recommended_size": 4
+    }
+  },
+  "analyst_deliberations_sample": [
+    {
+      "schema_version": 1,
+      "packet_type": "DATA_ONLY_CONSULTATIVE_ADVISORY",
+      "timestamp_utc": "2026-11-18T13:38:48.965879+00:00",
+      "product": "BTC-EUR",
+      "market_tier": "EXPLORATORY",
+      "analysts": {
+        "market_analyst": {
+          "role": "market-analyst",
+          "signal": "STRONG_INTEREST",
+          "score": 5.225557,
+          "rationale": "Alta liquidit\u00e0 (Depth ~4707346 EUR), spread eccellente (2.7 bps), volume solido (~17452360 EUR).",
+          "data_tier": "EXPLORATORY"
+        },
+        "bear_analyst": {
+          "role": "bear-analyst",
+          "critical_evaluation": "ACCEPTABLE_RISK_FOR_STUDY",
+          "risk_factors": [
+            "Asincronia temporale intrinseca (Coinbase /stats privo di clock exchange certificato)"
+          ],
+          "advisory_notes": "Opportunit\u00e0 interessante per osservazione, ma non conforme agli standard per ordini operativi."
+        },
+        "trading_strategist": {
+          "role": "trading-strategist",
+          "theoretical_action": "THEORETICAL_STUDY_LONG",
+          "strategy_notes": "Valutare dinamica di accumulo sopra 57766.15 EUR. Stop loss teorico a 56599.16 EUR.",
+          "operational_action": "HOLD (Dati non validati per ordini)"
+        }
+      },
+      "director": {
+        "role": "trading-director",
+        "discussion_status": "DELIBERATION_RECORDED_CONSULTATIVE_ONLY",
+        "consensus_summary": "BTC-EUR: Discussione analisti completata in modalit\u00e0 DATA_ONLY. Segnale MA: STRONG_INTEREST, Giudizio Bear: ACCEPTABLE_RISK_FOR_STUDY.",
+        "operational_decision": "HOLD / NO_TRADE_EXECUTION_PERMITTED"
+      },
+      "risk_gate": {
+        "gate_status": "DENY",
+        "gate_reason": "FAIL-CLOSED: Market tier is EXPLORATORY (Unsynchronized exchange clocks or incomplete historical 720h series). Execution authorization denied.",
+        "paper_status": "DISABLED",
+        "can_execute": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "packet_type": "DATA_ONLY_CONSULTATIVE_ADVISORY",
+      "timestamp_utc": "2026-11-18T13:38:48.965891+00:00",
+      "product": "ETH-EUR",
+      "market_tier": "EXPLORATORY",
+      "analysts": {
+        "market_analyst": {
+          "role": "market-analyst",
+          "signal": "STRONG_INTEREST",
+          "score": 4.80394,
+          "rationale": "Alta liquidit\u00e0 (Depth ~1218704 EUR), spread eccellente (2.3 bps), volume solido (~4998338 EUR).",
+          "data_tier": "EXPLORATORY"
+        },
+        "bear_analyst": {
+          "role": "bear-analyst",
+          "critical_evaluation": "ACCEPTABLE_RISK_FOR_STUDY",
+          "risk_factors": [
+            "Asincronia temporale intrinseca (Coinbase /stats privo di clock exchange certificato)"
+          ],
+          "advisory_notes": "Opportunit\u00e0 interessante per osservazione, ma non conforme agli standard per ordini operativi."
+        },
+        "trading_strategist": {
+          "role": "trading-strategist",
+          "theoretical_action": "THEORETICAL_STUDY_LONG",
+          "strategy_notes": "Valutare dinamica di accumulo sopra 1618.22 EUR. Stop loss teorico a 1585.53 EUR.",
+          "operational_action": "HOLD (Dati non validati per ordini)"
+        }
+      },
+      "director": {
+        "role": "trading-director",
+        "discussion_status": "DELIBERATION_RECORDED_CONSULTATIVE_ONLY",
+        "consensus_summary": "ETH-EUR: Discussione analisti completata in modalit\u00e0 DATA_ONLY. Segnale MA: STRONG_INTEREST, Giudizio Bear: ACCEPTABLE_RISK_FOR_STUDY.",
+        "operational_decision": "HOLD / NO_TRADE_EXECUTION_PERMITTED"
+      },
+      "risk_gate": {
+        "gate_status": "DENY",
+        "gate_reason": "FAIL-CLOSED: Market tier is EXPLORATORY (Unsynchronized exchange clocks or incomplete historical 720h series). Execution authorization denied.",
+        "paper_status": "DISABLED",
+        "can_execute": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "packet_type": "DATA_ONLY_CONSULTATIVE_ADVISORY",
+      "timestamp_utc": "2026-11-18T13:38:48.965898+00:00",
+      "product": "ADA-EUR",
+      "market_tier": "EXPLORATORY",
+      "analysts": {
+        "market_analyst": {
+          "role": "market-analyst",
+          "signal": "LOW_INTEREST",
+          "score": 3.821219,
+          "rationale": "Spread elevato (5.0 bps) o volume ridotto (~244009 EUR). Bassa priorit\u00e0.",
+          "data_tier": "EXPLORATORY"
+        },
+        "bear_analyst": {
+          "role": "bear-analyst",
+          "critical_evaluation": "HIGH_CAUTION",
+          "risk_factors": [
+            "Asincronia temporale intrinseca (Coinbase /stats privo di clock exchange certificato)",
+            "Volume rolling modesto: possibile liquidit\u00e0 apparente non durevole"
+          ],
+          "advisory_notes": "Opportunit\u00e0 interessante per osservazione, ma non conforme agli standard per ordini operativi."
+        },
+        "trading_strategist": {
+          "role": "trading-strategist",
+          "theoretical_action": "THEORETICAL_STUDY_MONITOR",
+          "strategy_notes": "Mantenere solo in watchlist per divergenze spread/volume.",
+          "operational_action": "HOLD (Dati non validati per ordini)"
+        }
+      },
+      "director": {
+        "role": "trading-director",
+        "discussion_status": "DELIBERATION_RECORDED_CONSULTATIVE_ONLY",
+        "consensus_summary": "ADA-EUR: Discussione analisti completata in modalit\u00e0 DATA_ONLY. Segnale MA: LOW_INTEREST, Giudizio Bear: HIGH_CAUTION.",
+        "operational_decision": "HOLD / NO_TRADE_EXECUTION_PERMITTED"
+      },
+      "risk_gate": {
+        "gate_status": "DENY",
+        "gate_reason": "FAIL-CLOSED: Market tier is EXPLORATORY (Unsynchronized exchange clocks or incomplete historical 720h series). Execution authorization denied.",
+        "paper_status": "DISABLED",
+        "can_execute": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "packet_type": "DATA_ONLY_CONSULTATIVE_ADVISORY",
+      "timestamp_utc": "2026-11-18T13:38:48.965904+00:00",
+      "product": "LINK-EUR",
+      "market_tier": "EXPLORATORY",
+      "analysts": {
+        "market_analyst": {
+          "role": "market-analyst",
+          "signal": "LOW_INTEREST",
+          "score": 3.701715,
+          "rationale": "Spread elevato (13.8 bps) o volume ridotto (~106558 EUR). Bassa priorit\u00e0.",
+          "data_tier": "EXPLORATORY"
+        },
+        "bear_analyst": {
+          "role": "bear-analyst",
+          "critical_evaluation": "HIGH_CAUTION",
+          "risk_factors": [
+            "Asincronia temporale intrinseca (Coinbase /stats privo di clock exchange certificato)",
+            "Volume rolling modesto: possibile liquidit\u00e0 apparente non durevole"
+          ],
+          "advisory_notes": "Opportunit\u00e0 interessante per osservazione, ma non conforme agli standard per ordini operativi."
+        },
+        "trading_strategist": {
+          "role": "trading-strategist",
+          "theoretical_action": "THEORETICAL_STUDY_MONITOR",
+          "strategy_notes": "Mantenere solo in watchlist per divergenze spread/volume.",
+          "operational_action": "HOLD (Dati non validati per ordini)"
+        }
+      },
+      "director": {
+        "role": "trading-director",
+        "discussion_status": "DELIBERATION_RECORDED_CONSULTATIVE_ONLY",
+        "consensus_summary": "LINK-EUR: Discussione analisti completata in modalit\u00e0 DATA_ONLY. Segnale MA: LOW_INTEREST, Giudizio Bear: HIGH_CAUTION.",
+        "operational_decision": "HOLD / NO_TRADE_EXECUTION_PERMITTED"
+      },
+      "risk_gate": {
+        "gate_status": "DENY",
+        "gate_reason": "FAIL-CLOSED: Market tier is EXPLORATORY (Unsynchronized exchange clocks or incomplete historical 720h series). Execution authorization denied.",
+        "paper_status": "DISABLED",
+        "can_execute": false
+      }
+    },
+    {
+      "schema_version": 1,
+      "packet_type": "DATA_ONLY_CONSULTATIVE_ADVISORY",
+      "timestamp_utc": "2026-11-18T13:38:48.965910+00:00",
+      "product": "LTC-EUR",
+      "market_tier": "EXPLORATORY",
+      "analysts": {
+        "market_analyst": {
+          "role": "market-analyst",
+          "signal": "LOW_INTEREST",
+          "score": 3.665552,
+          "rationale": "Spread elevato (9.9 bps) o volume ridotto (~143201 EUR). Bassa priorit\u00e0.",
+          "data_tier": "EXPLORATORY"
+        },
+        "bear_analyst": {
+          "role": "bear-analyst",
+          "critical_evaluation": "HIGH_CAUTION",
+          "risk_factors": [
+            "Asincronia temporale intrinseca (Coinbase /stats privo di clock exchange certificato)",
+            "Libro ordini sottile entro +/-1% (~44788 EUR): rischio assorbimento impatti",
+            "Volume rolling modesto: possibile liquidit\u00e0 apparente non durevole"
+          ],
+          "advisory_notes": "Opportunit\u00e0 interessante per osservazione, ma non conforme agli standard per ordini operativi."
+        },
+        "trading_strategist": {
+          "role": "trading-strategist",
+          "theoretical_action": "THEORETICAL_STUDY_MONITOR",
+          "strategy_notes": "Mantenere solo in watchlist per divergenze spread/volume.",
+          "operational_action": "HOLD (Dati non validati per ordini)"
+        }
+      },
+      "director": {
+        "role": "trading-director",
+        "discussion_status": "DELIBERATION_RECORDED_CONSULTATIVE_ONLY",
+        "consensus_summary": "LTC-EUR: Discussione analisti completata in modalit\u00e0 DATA_ONLY. Segnale MA: LOW_INTEREST, Giudizio Bear: HIGH_CAUTION.",
+        "operational_decision": "HOLD / NO_TRADE_EXECUTION_PERMITTED"
+      },
+      "risk_gate": {
+        "gate_status": "DENY",
+        "gate_reason": "FAIL-CLOSED: Market tier is EXPLORATORY (Unsynchronized exchange clocks or incomplete historical 720h series). Execution authorization denied.",
+        "paper_status": "DISABLED",
+        "can_execute": false
+      }
+    }
+  ],
+  "safety_confirmation": {
+    "all_cron_jobs_paused": true,
+    "paper_trading_status": "DISABLED",
+    "real_trading_status": "PROHIBITED",
+    "coinbase_private_status": "PENDING_AUTH",
+    "os_blocked_status": "MAINTAINED"
+  }
+}

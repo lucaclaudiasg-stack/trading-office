@@ -1,0 +1,136 @@
+{
+  "timestamp_utc": "2026-11-18T20:36:32.460095+00:00",
+  "total_valuable_eur": 139.05,
+  "unvalued_assets_count": 8,
+  "holdings": [
+    {
+      "asset": "EUR",
+      "balance": 2.53,
+      "price_eur": 1.0,
+      "timestamp": "2026-11-18T20:36:28.822508+00:00",
+      "value_eur": 2.53,
+      "status": "VERIFIED",
+      "weight_percent": 1.82
+    },
+    {
+      "asset": "BTC",
+      "balance": 0.00181225,
+      "pair": "BTC-EUR",
+      "price_eur": 57002.67,
+      "timestamp": "2026-11-18T20:36:28.274306Z",
+      "value_eur": 103.3030887075,
+      "status": "VERIFIED",
+      "weight_percent": 74.29
+    },
+    {
+      "asset": "ETH",
+      "balance": 0.0208417,
+      "pair": "ETH-EUR",
+      "price_eur": 1593.84,
+      "timestamp": "2026-11-18T20:36:09.283217Z",
+      "value_eur": 33.218335128,
+      "status": "VERIFIED",
+      "weight_percent": 23.89
+    },
+    {
+      "asset": "XLM",
+      "balance": 26.468429,
+      "pair": "XLM-EUR",
+      "price_eur": 0.12511,
+      "timestamp": "2026-11-18T20:31:18.715662Z",
+      "value_eur": 3.31146515219,
+      "status": "VERIFIED",
+      "weight_percent": 2.38
+    },
+    {
+      "asset": "GRT",
+      "balance": 3.95726156,
+      "pair": "GRT-EUR",
+      "price_eur": 0.015537,
+      "timestamp": "2026-11-18T19:39:09.314061Z",
+      "value_eur": 0.061483972857720004,
+      "status": "VERIFIED",
+      "weight_percent": 0.04
+    },
+    {
+      "asset": "FET",
+      "balance": 5.33808673,
+      "pair": "FET-EUR",
+      "price_eur": "VALUATION_UNAVAILABLE",
+      "timestamp": null,
+      "value_eur": 0.0,
+      "status": "VALUATION_UNAVAILABLE",
+      "weight_percent": 0.0
+    },
+    {
+      "asset": "AMP",
+      "balance": 46.76313466,
+      "pair": "AMP-EUR",
+      "price_eur": "VALUATION_UNAVAILABLE",
+      "timestamp": null,
+      "value_eur": 0.0,
+      "status": "VALUATION_UNAVAILABLE",
+      "weight_percent": 0.0
+    },
+    {
+      "asset": "NKN",
+      "balance": 41.61004336,
+      "pair": "NKN-EUR",
+      "price_eur": "VALUATION_UNAVAILABLE",
+      "timestamp": null,
+      "value_eur": 0.0,
+      "status": "VALUATION_UNAVAILABLE",
+      "weight_percent": 0.0
+    },
+    {
+      "asset": "ENJ",
+      "balance": 18.78598323,
+      "pair": "ENJ-EUR",
+      "price_eur": "VALUATION_UNAVAILABLE",
+      "timestamp": null,
+      "value_eur": 0.0,
+      "status": "VALUATION_UNAVAILABLE",
+      "weight_percent": 0.0
+    },
+    {
+      "asset": "RLY",
+      "balance": 4.49281187,
+      "pair": "RLY-EUR",
+      "price_eur": "VALUATION_UNAVAILABLE",
+      "timestamp": null,
+      "value_eur": 0.0,
+      "status": "VALUATION_UNAVAILABLE",
+      "weight_percent": 0.0
+    },
+    {
+      "asset": "ALEO",
+      "balance": 3.449765,
+      "pair": "ALEO-EUR",
+      "price_eur": "VALUATION_UNAVAILABLE",
+      "timestamp": null,
+      "value_eur": 0.0,
+      "status": "VALUATION_UNAVAILABLE",
+      "weight_percent": 0.0
+    },
+    {
+      "asset": "COMP",
+      "balance": 0.02061009,
+      "pair": "COMP-EUR",
+      "price_eur": "VALUATION_UNAVAILABLE",
+      "timestamp": null,
+      "value_eur": 0.0,
+      "status": "VALUATION_UNAVAILABLE",
+      "weight_percent": 0.0
+    },
+    {
+      "asset": "CLV",
+      "balance": 1.96078431,
+      "pair": "CLV-EUR",
+      "price_eur": "VALUATION_UNAVAILABLE",
+      "timestamp": null,
+      "value_eur": 0.0,
+      "status": "VALUATION_UNAVAILABLE",
+      "weight_percent": 0.0
+    }
+  ]
+}

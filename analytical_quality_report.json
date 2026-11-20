@@ -1,0 +1,35 @@
+{
+  "timestamp_utc": "2026-11-18T21:22:05.486470+00:00",
+  "data_audit": {
+    "table_used": "persistent_candles",
+    "total_candles": 0,
+    "monitored_products_count": 0,
+    "products": []
+  },
+  "universe_audit": {
+    "source": "live_exploratory_results.json",
+    "top20_count": 20,
+    "pairs_discovered_total": 33,
+    "timestamp_utc": "2026-11-18T13:38:48.965913+00:00"
+  },
+  "scoring_specification": {
+    "weights": {
+      "trend_and_structure": 25,
+      "momentum_and_indicators": 20,
+      "liquidity_and_spread": 20,
+      "risk_reward_theoretical": 20,
+      "data_quality_and_robustness": 15
+    },
+    "total_max": 100,
+    "classification_thresholds": {
+      "DATA_READY_minimum_coverage": "90%",
+      "MINIMUM_QUALITY_FOR_SCORING": 8.0,
+      "EVALUATION_HORIZONS": [
+        "24h",
+        "72h",
+        "7d"
+      ]
+    }
+  },
+  "historical_sample_status": "BASELINE_INITIALIZED (Prospective tracking active in historical_analysis_archive.json)"
+}
