@@ -431,6 +431,30 @@ SPA_HTML = """<!DOCTYPE html>
                     <span class="text-accentblue font-medium flex items-center gap-1">Apri Simulazione <i class="fa-solid fa-chevron-right text-[8px]"></i></span>
                 </div>
             </div>
+            <!-- Hermes Aggressive Card (Overview) -->
+            <div onclick="switchTab('aggressive')" class="bg-cardbg border border-purple-800/60 p-4 rounded-xl shadow cursor-pointer hover:border-purple-600 transition space-y-2">
+                <div class="flex justify-between items-center">
+                    <span class="text-xs font-semibold text-purple-400 flex items-center gap-1.5">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>HERMES AGGRESSIVE (Laboratorio)</span>
+                    </span>
+                    <span class="text-[9px] bg-purple-950 text-purple-300 border border-purple-800 px-1.5 py-0.5 rounded">AUTONOMO</span>
+                </div>
+                <div class="flex justify-between items-end">
+                    <div>
+                        <span class="text-gray-400 text-[10px] block">Valore Portafoglio Aggressivo</span>
+                        <strong id="ov-agg-val" class="text-white text-base font-bold">143.58 EUR</strong>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-gray-400 text-[10px] block">P&L Netto</span>
+                        <span id="ov-agg-pnl" class="text-emerald-400 font-semibold text-xs font-mono">+1.16 EUR (+0.81%)</span>
+                    </div>
+                </div>
+                <div class="text-[10px] text-gray-400 pt-1 border-t border-bordercolor/60 flex justify-between">
+                    <span>Ultima decisione: <strong class="text-gray-200">HOLD / NO_ACTION</strong> (20/11/2026 · 21:22 CET)</span>
+                    <span class="text-purple-400 font-medium flex items-center gap-1">Apri Aggressive <i class="fa-solid fa-chevron-right text-[8px]"></i></span>
+                </div>
+            </div>
 
             <!-- Obiettivi Economici Card -->
             <div class="bg-cardbg border border-bordercolor p-4 rounded-xl shadow space-y-2">
