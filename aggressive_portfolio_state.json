@@ -58,11 +58,18 @@
       "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
       "action": "HOLD / NO_ACTION",
       "status": "COMPLETED_ISOLATED"
+    },
+    {
+      "cycle_id": "AGG-CYCLE-1795205023",
+      "timestamp_rome": "20/11/2026 \u00b7 21:03 CET",
+      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
+      "action": "HOLD / NO_ACTION",
+      "status": "COMPLETED_ISOLATED"
     }
   ],
   "last_cycle": {
-    "cycle_id": "AGG-CYCLE-1795201144",
-    "timestamp_rome": "20/11/2026 \u00b7 19:59 CET",
+    "cycle_id": "AGG-CYCLE-1795205023",
+    "timestamp_rome": "20/11/2026 \u00b7 21:03 CET",
     "market_dataset": "Coinbase Public Spot Ticker (Sanitized)",
     "identified_regime": "TREND_DOWN (Defensive Bearish)",
     "evaluated_strategies": [
@@ -108,10 +115,10 @@
       "simulated_price": "N/D",
       "fees_eur": "0.00",
       "slippage_eur": "0.00",
-      "timestamp_rome": "20/11/2026 \u00b7 19:59 CET",
+      "timestamp_rome": "20/11/2026 \u00b7 21:03 CET",
       "status": "NO_ACTION",
       "reason": "Condizioni di ingresso non soddisfatte dai filtri di volatilit\u00e0.",
-      "ledger_event_id": "EVT-AGG-1795201144"
+      "ledger_event_id": "EVT-AGG-1795205023"
     }
   }
 }
