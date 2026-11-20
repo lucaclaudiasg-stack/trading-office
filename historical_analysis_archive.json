@@ -2594,5 +2594,47 @@
       "real_trading": "DISABLED",
       "coinbase_mcp": "READ_ONLY"
     }
+  },
+  {
+    "session_id": "DEBATE-EVENING-1795206600",
+    "timestamp_utc": "2026-11-20T20:30:00.283443+00:00",
+    "local_time_rome": "2026-11-20T21:30:00.283433+01:00",
+    "meeting_type": "evening",
+    "methodology": "METHODOLOGY_V1_FROZEN",
+    "description": "Rivalutazione serale e revisione della decisione mattutina sulla base dei nuovi dati",
+    "market_dataset": {
+      "BTC-EUR": {
+        "price": 56931.63,
+        "rsi": 29.07,
+        "regime": "TREND_DOWN"
+      },
+      "ETH-EUR": {
+        "price": 1595.87,
+        "rsi": 28.65,
+        "regime": "TREND_DOWN"
+      },
+      "LINK-EUR": {
+        "price": 11.2,
+        "rsi": 30.0,
+        "regime": "TREND_DOWN"
+      }
+    },
+    "agents_participated": [
+      "opportunity-scanner",
+      "market-analyst",
+      "quant-researcher",
+      "trading-strategist",
+      "bear-analyst",
+      "liquidity-execution-analyst",
+      "portfolio-rotation-analyst",
+      "trading-director"
+    ],
+    "trading_director_conclusion": "CONFIRMED_HOLD / NO_NEW_EXPOSURE",
+    "security_gates": {
+      "risk_engine": "DENY",
+      "paper_trading": "DISABLED",
+      "real_trading": "DISABLED",
+      "coinbase_mcp": "READ_ONLY"
+    }
   }
 ]

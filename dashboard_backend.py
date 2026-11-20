@@ -709,7 +709,7 @@ SPA_HTML = """<!DOCTYPE html>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                 <!-- Hermes AI -->
                 <div class="bg-cardbg border border-accentblue p-3.5 rounded-xl shadow space-y-1.5">
                     <div class="flex justify-between items-center">
@@ -820,6 +820,44 @@ SPA_HTML = """<!DOCTYPE html>
                     <span class="bg-purple-950 text-purple-300 border border-purple-800 text-[10px] px-2 py-0.5 rounded font-mono font-bold">AUTONOMO / ISOLATO</span>
                 </div>
                 <p class="text-xs text-gray-400">Laboratorio quantitativo ad alta frequenza (ciclo 4h) operante in perfetta autonomia decisionale senza contaminazione con il Comitato dei 9 agenti.</p>
+            </div>
+
+                        <!-- BOX RIEPILOGATIVO IN ALTO (HERMES AGGRESSIVE) -->
+            <div class="bg-cardbg border border-purple-800/80 p-4 rounded-xl shadow space-y-3">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-bordercolor pb-2.5">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-purple-500 animate-pulse"></span>
+                        <h3 class="text-sm font-bold text-white flex items-center gap-1.5">
+                            <i class="fa-solid fa-bolt text-purple-400"></i>
+                            <span>Hermes Aggressive — Riepilogo Portafoglio Virtuale</span>
+                        </h3>
+                    </div>
+                    <span class="bg-purple-950 text-purple-300 border border-purple-800 text-[10px] px-2 py-0.5 rounded font-mono font-bold">ISOLATO / SIMULATION_ONLY</span>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+                    <div class="bg-darkbg p-2.5 rounded border border-bordercolor">
+                        <span class="text-gray-400 block text-[10px]">Valore Corrente</span>
+                        <strong class="text-white text-sm">143.58 EUR</strong>
+                    </div>
+                    <div class="bg-darkbg p-2.5 rounded border border-bordercolor">
+                        <span class="text-gray-400 block text-[10px]">P&L Netto</span>
+                        <strong class="text-emerald-400 text-sm">+1.16 EUR (+0.81%)</strong>
+                    </div>
+                    <div class="bg-darkbg p-2.5 rounded border border-bordercolor">
+                        <span class="text-gray-400 block text-[10px]">Esposizione Virtuale</span>
+                        <strong class="text-purple-300 text-sm">98.24% Spot</strong>
+                    </div>
+                    <div class="bg-darkbg p-2.5 rounded border border-bordercolor">
+                        <span class="text-gray-400 block text-[10px]">Drawdown Massimo</span>
+                        <strong class="text-emerald-400 text-sm">0.00%</strong>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row justify-between text-[11px] text-gray-400 bg-black/30 p-2 rounded border border-bordercolor/60 gap-1">
+                    <span>Strategia / Decisione: <strong class="text-white">Adaptive Hybrid V1 / HOLD</strong></span>
+                    <span>Ultimo Aggiornamento: <strong class="text-gray-300">20/11/2026 · 21:22 CET</strong></span>
+                </div>
             </div>
 
             <!-- Blocco: Ultima Scelta dell'Agente -->
@@ -1478,7 +1516,8 @@ SPA_HTML = """<!DOCTYPE html>
                     data: {
                         labels: ['17/11 21:00', '18/11 09:30', '18/11 21:30', '19/11 09:30', '19/11 21:34', '20/11 09:30'],
                         datasets: [
-                            { label: 'Hermes AI', data: [142.42, 143.10, 143.58, 143.20, 143.58, 143.58], borderColor: '#3b82f6', backgroundColor: 'rgba(59, 130, 246, 0.1)', tension: 0.3, fill: true },
+                            { label: 'Hermes AI', data: [142.42, 143.10, 143.58, 143.20, 143.58, 143.58], borderColor: '#3b82f6', backgroundColor: 'rgba(59, 130, 246, 0.05)', tension: 0.3 },
+                            { label: 'Hermes Aggressive', data: [142.42, 143.10, 143.58, 143.58, 143.58, 143.58], borderColor: '#a855f7', backgroundColor: 'rgba(168, 85, 247, 0.15)', tension: 0.3, fill: true },
                             { label: 'Buy & Hold', data: [142.42, 143.10, 143.58, 143.20, 143.58, 143.58], borderColor: '#10b981', borderDash: [4, 4], tension: 0.3 },
                             { label: 'Defensive EUR', data: [142.42, 142.42, 142.42, 142.42, 142.42, 142.42], borderColor: '#f59e0b', tension: 0.1 }
                         ]
@@ -1527,11 +1566,11 @@ SPA_HTML = """<!DOCTYPE html>
                 chartDrawdown = new Chart(ctx5, {
                     type: 'bar',
                     data: {
-                        labels: ['Hermes AI', 'Buy & Hold', 'Defensive EUR'],
+                        labels: ['Hermes AI', 'Hermes Aggressive', 'Buy & Hold', 'Defensive EUR'],
                         datasets: [{
                             label: 'Drawdown Massimo (%)',
-                            data: [0.00, 0.00, 0.00],
-                            backgroundColor: ['#3b82f6', '#10b981', '#f59e0b'],
+                            data: [0.00, 0.00, 0.00, 0.00],
+                            backgroundColor: ['#3b82f6', '#a855f7', '#10b981', '#f59e0b'],
                             borderRadius: 4
                         }]
                     },

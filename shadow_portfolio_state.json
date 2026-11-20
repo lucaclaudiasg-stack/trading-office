@@ -1,7 +1,7 @@
 {
   "simulator_version": "SHADOW_V1_FROZEN",
   "created_at_utc": "2026-11-19T06:49:51.825808+00:00",
-  "last_updated_utc": "2026-11-20T08:30:00.297890+00:00",
+  "last_updated_utc": "2026-11-20T20:30:00.292488+00:00",
   "status": "SIMULATION_ACTIVE",
   "disclaimer": "SIMULAZIONE \u2014 DENARO NON REALE",
   "certified_initial_capital_eur": "143.58",
@@ -398,6 +398,19 @@
     "max_drawdown_pct": "1.20%"
   },
   "ledger": [
+    {
+      "id": "OP-1795206600",
+      "decision_id": "DEBATE-EVENING-1795206600",
+      "timestamp_utc": "2026-11-20T20:30:00.292488+00:00",
+      "strategy": "Defensive Cash / HOLD",
+      "action": "HOLD / NO_ACTION",
+      "symbol": "ALL_ASSETS",
+      "quantity": "N/A",
+      "execution_price_eur": "N/A",
+      "fees_paid_eur": "0.00",
+      "reason": "Decisione Comitato (evening): CONFIRMED_HOLD / NO_NEW_EXPOSURE. Conservazione quantita intatte, zero vendite.",
+      "outcome": "EXECUTED_VIRTUAL_HOLD"
+    },
     {
       "id": "OP-1795163400",
       "decision_id": "DEBATE-MORNING-1795163400",
