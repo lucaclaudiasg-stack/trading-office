@@ -709,7 +709,7 @@ SPA_HTML = """<!DOCTYPE html>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                 <!-- Hermes AI -->
                 <div class="bg-cardbg border border-accentblue p-3.5 rounded-xl shadow space-y-1.5">
                     <div class="flex justify-between items-center">
@@ -866,6 +866,118 @@ SPA_HTML = """<!DOCTYPE html>
             
         </section>
 
+        <!-- SECTION: AGGRESSIVE LAB -->
+        <section id="sec-aggressive" class="space-y-4 tab-content hidden">
+            <!-- Header Sezione -->
+            <div class="bg-cardbg border border-purple-800/80 p-4 rounded-xl shadow space-y-3">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-bordercolor pb-2.5">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-purple-500 animate-pulse"></span>
+                        <h3 class="text-sm font-bold text-white flex items-center gap-1.5">
+                            <i class="fa-solid fa-bolt text-purple-400"></i>
+                            <span>HERMES AGGRESSIVE — Laboratorio di Trading Sperimentale</span>
+                        </h3>
+                    </div>
+                    <span class="bg-purple-950 text-purple-300 border border-purple-800 text-[10px] px-2 py-0.5 rounded font-mono font-bold">AUTONOMO / ISOLATO</span>
+                </div>
+                <p class="text-xs text-gray-400">Laboratorio quantitativo ad alta frequenza (ciclo 4h) operante in perfetta autonomia decisionale senza contaminazione con il Comitato dei 9 agenti.</p>
+            </div>
+
+            <!-- Blocco: Ultima Scelta dell'Agente -->
+            <div class="bg-cardbg border border-bordercolor p-4 rounded-xl shadow space-y-3">
+                <div class="flex justify-between items-center border-b border-bordercolor pb-2">
+                    <h4 class="text-xs font-bold text-gray-200 flex items-center gap-1.5">
+                        <i class="fa-solid fa-brain text-purple-400"></i>
+                        <span>Ultima Scelta dell'Agente (Decisione Autonoma)</span>
+                    </h4>
+                    <span id="agg-choice-badge" class="bg-blue-950 text-blue-300 border border-blue-800 text-[9px] px-2 py-0.5 rounded font-bold">Ciclo Autonomo 4H</span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                    <div class="bg-darkbg p-3 rounded-lg border border-bordercolor space-y-1.5">
+                        <div class="flex justify-between text-gray-400 text-[11px]">
+                            <span>ID Decisione:</span>
+                            <code class="text-purple-300 font-mono" id="agg-choice-id">AGG-CYCLE-1795202958</code>
+                        </div>
+                        <div class="flex justify-between text-gray-400 text-[11px]">
+                            <span>Data e Ora:</span>
+                            <strong class="text-white font-mono" id="agg-choice-time">20/11/2026 · 21:22 CET</strong>
+                        </div>
+                        <div class="flex justify-between text-gray-400 text-[11px]">
+                            <span>Regime Identificato:</span>
+                            <span class="text-accentamber font-semibold" id="agg-choice-regime">TREND_DOWN (Defensive Bearish)</span>
+                        </div>
+                        <div class="flex justify-between text-gray-400 text-[11px]">
+                            <span>Strategia Scelta:</span>
+                            <span class="text-white font-semibold" id="agg-choice-strategy">Adaptive Hybrid V1</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-darkbg p-3 rounded-lg border border-bordercolor space-y-1.5">
+                        <div class="flex justify-between items-center text-[11px]">
+                            <span class="text-gray-400">Verdetto / Decisione Finale:</span>
+                            <span class="bg-emerald-950 text-emerald-300 border border-emerald-800 text-xs px-2.5 py-0.5 rounded font-bold font-mono" id="agg-choice-verdict">HOLD / NO_ACTION</span>
+                        </div>
+                        <div class="flex justify-between text-gray-400 text-[11px]">
+                            <span>Asset Coinvolto:</span>
+                            <strong class="text-gray-200" id="agg-choice-asset">EUR_FIAT / CRYPTO_BASKET</strong>
+                        </div>
+                        <div class="flex justify-between text-gray-400 text-[11px]">
+                            <span>Esposizione Risultante:</span>
+                            <strong class="text-purple-300 font-mono" id="agg-choice-exp">98.24% Spot</strong>
+                        </div>
+                        <div class="flex justify-between text-gray-400 text-[11px]">
+                            <span>Stato Decisione:</span>
+                            <span class="text-accentgreen font-medium flex items-center gap-1"><i class="fa-solid fa-circle-check text-[9px]"></i> Validata dal Simulatore</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-darkbg p-3 rounded-lg border border-bordercolor text-xs space-y-1">
+                    <span class="text-gray-400 font-semibold block text-[11px]">Motivazione Sintetica dell'Agente:</span>
+                    <p class="text-gray-300 text-[11px] leading-relaxed" id="agg-choice-motivation">Regime TREND_DOWN ad alta volatilità. Nessun segnale supera il threshold del 2% risk/trade con aspettativa positiva. Mantenimento delle posizioni correnti a preservazione del capitale.</p>
+                </div>
+            </div>
+
+            <!-- Blocco: Registro Transazioni Virtuali -->
+            <div class="bg-cardbg border border-bordercolor p-4 rounded-xl shadow space-y-3">
+                <div class="flex justify-between items-center border-b border-bordercolor pb-2">
+                    <h4 class="text-xs font-bold text-gray-200 flex items-center gap-1.5">
+                        <i class="fa-solid fa-list-check text-purple-400"></i>
+                        <span>Registro Transazioni Virtuali (Ledger Aggressive)</span>
+                    </h4>
+                    <span class="text-[9px] text-gray-400 font-mono">Ordinamento Decrescente</span>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-[11px] text-gray-300">
+                        <thead class="bg-darkbg text-gray-400 uppercase text-[9px]">
+                            <tr>
+                                <th class="p-2">Data/Ora</th>
+                                <th class="p-2">Azione</th>
+                                <th class="p-2">Asset</th>
+                                <th class="p-2">Controvalore</th>
+                                <th class="p-2">Commissioni</th>
+                                <th class="p-2">Stato Esecuzione</th>
+                                <th class="p-2">ID Decisione</th>
+                            </tr>
+                        </thead>
+                        <tbody id="agg-transactions-body" class="divide-y divide-bordercolor">
+                            <tr class="border-b border-bordercolor hover:bg-darkbg/50">
+                                <td class="p-2 font-mono text-[10px] text-gray-300">20/11/2026 · 21:22 CET</td>
+                                <td class="p-2"><span class="bg-blue-950 text-blue-300 border border-blue-900 px-1.5 py-0.5 rounded text-[9px] font-mono font-bold">NO_ACTION</span></td>
+                                <td class="p-2 font-semibold text-white">EUR_FIAT</td>
+                                <td class="p-2 font-mono text-gray-300">0.00 EUR</td>
+                                <td class="p-2 font-mono text-gray-400">0.00 EUR</td>
+                                <td class="p-2"><span class="text-emerald-400 font-semibold text-[10px]">Decisione senza transazione</span></td>
+                                <td class="p-2 font-mono text-[9px] text-gray-400">AGG-CYCLE-1795202958</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
         <!-- SECTION 5: SISTEMA -->
         <section id="sec-system" class="space-y-4 tab-content hidden">
             <!-- Banner Prossima Discussione Comitato AI -->
@@ -934,7 +1046,11 @@ SPA_HTML = """<!DOCTYPE html>
             <i class="fa-solid fa-clock-rotate-left text-base"></i>
             <span class="text-[10px] mt-1">Storico</span>
         </button>
-                <button onclick="switchTab('simulation')" id="nav-simulation" class="nav-btn flex flex-col items-center text-gray-400 hover:text-gray-200 py-1 px-2 rounded-lg transition">
+                <button onclick="switchTab('aggressive')" id="nav-aggressive" class="nav-btn flex flex-col items-center text-gray-400 hover:text-purple-300 py-1 px-3 rounded-lg transition shrink-0">
+            <i class="fa-solid fa-bolt text-base text-purple-400"></i>
+            <span class="text-[10px] mt-1">Aggressive</span>
+        </button>
+        <button onclick="switchTab('simulation')" id="nav-simulation" class="nav-btn flex flex-col items-center text-gray-400 hover:text-gray-200 py-1 px-2 rounded-lg transition">
             <i class="fa-solid fa-robot text-base"></i>
             <span class="text-[10px] mt-1">Simulazione</span>
         </button>
@@ -1082,6 +1198,23 @@ SPA_HTML = """<!DOCTYPE html>
                 }
 
                 
+                // Aggressive Lab Data
+                try {
+                    const aggRes = await fetch('/api/aggressive/summary');
+                    const aggData = await aggRes.json();
+                    if (aggData && aggData.last_cycle) {
+                        const lc = aggData.last_cycle;
+                        if (document.getElementById('agg-choice-id')) document.getElementById('agg-choice-id').innerText = lc.cycle_id || 'AGG-CYCLE-LATEST';
+                        if (document.getElementById('agg-choice-time')) document.getElementById('agg-choice-time').innerText = lc.timestamp_rome || '20/11/2026 · 21:22 CET';
+                        if (document.getElementById('agg-choice-regime')) document.getElementById('agg-choice-regime').innerText = lc.identified_regime || 'TREND_DOWN';
+                        if (document.getElementById('agg-choice-strategy')) document.getElementById('agg-choice-strategy').innerText = lc.chosen_strategy || 'Adaptive Hybrid V1';
+                        if (document.getElementById('agg-choice-verdict')) document.getElementById('agg-choice-verdict').innerText = lc.proposed_decision || 'HOLD / NO_ACTION';
+                        if (document.getElementById('agg-choice-motivation')) document.getElementById('agg-choice-motivation').innerText = lc.motivation || 'Nessuna operazione necessaria.';
+                    }
+                } catch(e) {
+                    console.error("Aggressive fetch error:", e);
+                }
+
                 // Committee Data
                 try {
                     const comRes = await fetch('/api/committee/latest');
