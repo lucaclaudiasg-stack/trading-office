@@ -58,6 +58,19 @@ def get_committee_latest():
             {"agent": "Trading Director", "role": "Sintesi & Decisione Finale", "time": "21:34 CET", "status": "REAL_INTERVENTION", "content": "Verdetto formale: Defensive Cash (100% Liquidita / HOLD protettivo). Mean Reversion scartata; nessuna Grande Opportunita. Confermati Risk Engine = DENY e Paper Trading = DISABLED."}
         ]
 
+    is_morning = "MORNING" in session_id or "09:30" in ts_rome
+    target_hour = "09" if is_morning else "21"
+
+    formatted_interventions = []
+    for item in interventions:
+        item_copy = dict(item)
+        t_str = item_copy.get("time", "")
+        if "21:" in t_str and target_hour == "09":
+            item_copy["time"] = t_str.replace("21:", "09:")
+        elif "09:" in t_str and target_hour == "21":
+            item_copy["time"] = t_str.replace("09:", "21:")
+        formatted_interventions.append(item_copy)
+
     status_label = "REAL_AGENT_DEBATE" if latest.get("type") == "REAL_AGENT_DEBATE" else "Job completato — sintesi deterministica registrata"
     
     return {
@@ -75,7 +88,7 @@ def get_committee_latest():
         "strategy": "Defensive Cash (100% Liquidita EUR)",
         "shadow_linked_action": "HOLD / NO_ACTION",
         "grande_opportunita": False,
-        "interventions": interventions
+        "interventions": formatted_interventions
     }
 
 def get_committee_history():

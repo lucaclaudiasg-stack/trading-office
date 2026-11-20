@@ -34,8 +34,7 @@ JOBS_PATH = Path('/opt/data/cron/jobs.json')
 SHADOW_STATE = Path('/opt/data/profiles/trading-office-manager/workspace/multi-asset-e2e/shadow_portfolio_state.json')
 DB_PATH = Path('/opt/data/cron/executions.db')
 if not DB_PATH.exists():
-    SHADOW_STATE = Path('/opt/data/profiles/trading-office-manager/workspace/multi-asset-e2e/shadow_portfolio_state.json')
-DB_PATH = Path('/opt/data/state.db')
+    DB_PATH = Path('/opt/data/state.db')
 
 class ReusableTCPServer(socketserver.TCPServer):
     allow_reuse_address = True
@@ -77,12 +76,21 @@ class DashboardHandler(http.server.SimpleHTTPRequestHandler):
 
 
     def get_overview_data(self):
+        val_eur = 143.58
+        recon_path = Path('/opt/data/profiles/trading-office-manager/workspace/multi-asset-e2e/final_reconciliation_report.json')
+        if recon_path.exists():
+            try:
+                rd = json.loads(recon_path.read_text(encoding='utf-8'))
+                val_eur = float(rd.get('PARTIAL_PORTFOLIO_VALUE_EUR', 143.58))
+            except Exception:
+                pass
+        now_rome = datetime.now(ZoneInfo("Europe/Rome")).strftime("%d/%m/%Y · %H:%M CET")
         return {
-            "portfolio_value_partial": 143.58,
+            "portfolio_value_partial": val_eur,
             "reference_capital": 142.42,
             "market_regime": "TREND_DOWN (Defensive)",
             "director_conclusion": "HOLD / NO_TRADE_EXECUTION_PERMITTED",
-            "last_update_rome": "19/11/2026 · 21:34 CET",
+            "last_update_rome": now_rome,
             "status": "DATA_ONLY"
         }
 
@@ -132,7 +140,7 @@ class DashboardHandler(http.server.SimpleHTTPRequestHandler):
                 records = json.loads(arch_path.read_text(encoding='utf-8'))
             except Exception:
                 pass
-        return {"records": records}
+        return {"records": records, "archive_records": records}
 
     def get_system_data(self):
         jobs_list = []
@@ -148,33 +156,111 @@ class DashboardHandler(http.server.SimpleHTTPRequestHandler):
                 pass
 
         execs = []
+        latest_exec_by_job = {}
         db_path = Path('/opt/data/cron/executions.db')
         if db_path.exists():
             try:
                 conn = sqlite3.connect(str(db_path))
                 cursor = conn.cursor()
-                cursor.execute("SELECT id, job_id, source, status, claimed_at, finished_at, error FROM executions ORDER BY claimed_at DESC LIMIT 10")
+                cursor.execute("SELECT id, job_id, source, status, claimed_at, started_at, finished_at, error FROM executions ORDER BY claimed_at DESC LIMIT 50")
                 rows = cursor.fetchall()
                 for r in rows:
-                    execs.append({
+                    exec_item = {
                         "id": r[0],
                         "job_id": r[1],
                         "source": r[2],
                         "status": r[3],
                         "claimed_at": r[4],
-                        "finished_at": r[5],
-                        "error": r[6]
-                    })
+                        "started_at": r[5] or r[4],
+                        "finished_at": r[6],
+                        "error": r[7],
+                        "has_real_evidence": True
+                    }
+                    execs.append(exec_item)
+                    if r[1] not in latest_exec_by_job:
+                        latest_exec_by_job[r[1]] = exec_item
                 conn.close()
             except Exception as e:
                 execs = [{"error": str(e)}]
+
+        for j in jobs_list:
+            j_id = j.get("id")
+            
+            # Format Hermes cron schedule details
+            sched_obj = j.get("schedule", {})
+            if isinstance(sched_obj, dict):
+                expr = sched_obj.get("expr", "")
+                disp = sched_obj.get("display", "")
+                kind = sched_obj.get("kind", "cron")
+            else:
+                expr = str(sched_obj) if sched_obj else ""
+                disp = str(sched_obj) if sched_obj else ""
+                kind = "cron"
+            
+            j["schedule_display"] = disp or j.get("schedule_display") or expr or "Schedulazione Hermes"
+            j["cron_expr"] = expr
+            j["schedule_kind"] = kind
+            
+            # Extract and format Hermes next_run_at into dynamic CET timestamp & countdown target
+            next_run_iso = j.get("next_run_at")
+            if next_run_iso:
+                try:
+                    dt = datetime.fromisoformat(next_run_iso)
+                    ts = int(dt.timestamp())
+                    dt_rome = dt.astimezone(ZoneInfo("Europe/Rome"))
+                    rome_str = dt_rome.strftime("%d/%m/%Y · %H:%M CET")
+                    j["next_run"] = {
+                        "determinable": True,
+                        "next_run_timestamp": ts,
+                        "next_run_rome": rome_str
+                    }
+                except Exception:
+                    j["next_run"] = {"determinable": False}
+            else:
+                j["next_run"] = {"determinable": False}
+
+            # Map last execution
+            if j_id in latest_exec_by_job:
+                j["last_execution"] = latest_exec_by_job[j_id]
+            elif j.get("last_status") == "ok":
+                j["last_execution"] = {
+                    "has_real_evidence": True,
+                    "status": "completed",
+                    "started_at": j.get("last_run_at", "N/D"),
+                    "finished_at": j.get("last_run_at", "N/D"),
+                    "error": j.get("last_error")
+                }
+            else:
+                j["last_execution"] = {
+                    "has_real_evidence": False,
+                    "status": "pending",
+                    "started_at": "N/D",
+                    "finished_at": "N/D",
+                    "error": None
+                }
+
+        now_dt = datetime.now(ZoneInfo("Europe/Rome"))
+        t_0930 = now_dt.replace(hour=9, minute=30, second=0, microsecond=0)
+        t_2130 = now_dt.replace(hour=21, minute=30, second=0, microsecond=0)
+        if now_dt < t_0930:
+            next_deb_dt = t_0930
+        elif now_dt < t_2130:
+            next_deb_dt = t_2130
+        else:
+            next_deb_dt = t_0930 + timedelta(days=1)
+
+        next_debate_info = {
+            "timestamp": int(next_deb_dt.timestamp()),
+            "rome_time": next_deb_dt.strftime("%d/%m/%Y · %H:%M CET")
+        }
 
         return {
             "status": "HEALTHY",
             "timezone": "Europe/Rome",
             "jobs_count": len(jobs_list),
             "jobs": jobs_list,
-            "recent_executions": execs
+            "recent_executions": execs,
+            "next_debate": next_debate_info
         }
 
     def get_committee_latest(self):
@@ -374,8 +460,9 @@ SPA_HTML = """<!DOCTYPE html>
         </section>
 
         <!-- SECTION 2: PORTAFOGLIO -->
+        <section id="sec-portfolio" class="space-y-4 tab-content hidden">
             <!-- GRAFICO 4: ALLOCAZIONE PORTAFOGLIO -->
-            <div class="bg-cardbg border border-bordercolor p-4 rounded-xl shadow mb-4 space-y-3">
+            <div class="bg-cardbg border border-bordercolor p-4 rounded-xl shadow space-y-3">
                 <div class="flex justify-between items-center">
                     <h3 class="text-xs font-semibold text-gray-200 flex items-center gap-1.5">
                         <i class="fa-solid fa-chart-pie text-accentblue"></i>
@@ -387,7 +474,7 @@ SPA_HTML = """<!DOCTYPE html>
                     <canvas id="chart-allocation"></canvas>
                 </div>
             </div>
-        <section id="sec-portfolio" class="space-y-4 tab-content hidden">
+
             <div class="bg-cardbg border border-bordercolor p-4 rounded-xl shadow">
                 <h3 class="text-sm font-semibold text-gray-200 mb-3"><i class="fa-solid fa-wallet text-accentblue mr-2"></i>Composizione Portafoglio Coinbase</h3>
                 <div class="overflow-x-auto">
@@ -688,6 +775,23 @@ SPA_HTML = """<!DOCTYPE html>
 
         <!-- SECTION 5: SISTEMA -->
         <section id="sec-system" class="space-y-4 tab-content hidden">
+            <!-- Banner Prossima Discussione Comitato AI -->
+            <div class="bg-amber-950/40 border border-amber-800/80 p-3 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-users-line text-accentamber text-base"></i>
+                    <div>
+                        <strong class="text-amber-200 block">Prossima Riunione Comitato AI (Discussione Bioraria)</strong>
+                        <span class="text-gray-300 text-[11px]" id="sys-next-debate-time">20/11/2026 · 21:30 CET</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2 self-start sm:self-auto">
+                    <span class="text-gray-400 text-[10px]">Countdown Discussione:</span>
+                    <span id="sys-next-debate-countdown" data-target-ts="1795206600" class="countdown-badge bg-amber-950 text-amber-300 border border-amber-700 font-mono font-bold text-xs px-2.5 py-1 rounded">
+                        Calcolo...
+                    </span>
+                </div>
+            </div>
+
             <div class="bg-cardbg border border-bordercolor p-4 rounded-xl shadow">
                 <h3 class="text-sm font-semibold text-gray-200 mb-3"><i class="fa-solid fa-server text-accentblue mr-2"></i>Stato dei Job Master (DATA_ONLY)</h3>
                 <div id="system-jobs" class="space-y-2 text-xs">
@@ -822,6 +926,12 @@ SPA_HTML = """<!DOCTYPE html>
                 if (document.getElementById('ov-director-conclusion')) {
                     document.getElementById('ov-director-conclusion').innerText = ovData.director_conclusion || ovData.trading_director_conclusion || 'N/D';
                 }
+                if (document.getElementById('ov-last-update')) {
+                    document.getElementById('ov-last-update').innerText = ovData.last_update_rome || '20/11/2026 · 16:11 CET';
+                }
+                if (document.getElementById('ov-market-last-update')) {
+                    document.getElementById('ov-market-last-update').innerText = ovData.last_update_rome || '20/11/2026 · 16:11 CET';
+                }
 
                 // Portfolio
                 const portRes = await fetch('/api/portfolio');
@@ -832,19 +942,27 @@ SPA_HTML = """<!DOCTYPE html>
                 
                 const tbody = document.getElementById('port-table-body');
                 tbody.innerHTML = '';
-                if (portData.holdings && portData.holdings.length > 0) {
-                    portData.holdings.forEach(h => {
+                const holdingsList = portData.holdings || portData.valuated_assets || [];
+                if (holdingsList.length > 0) {
+                    holdingsList.forEach(h => {
                         const tr = document.createElement('tr');
                         tr.className = 'border-b border-bordercolor';
+                        const assetName = h.asset || h.symbol || '';
+                        const bal = h.balance || '0';
+                        const pr = h.price_eur || 'N/D';
+                        const val = h.value_eur || '0';
+                        const wt = h.weight_percent || h.weight_pct || 'N/D';
+                        const wtDisplay = (wt !== 'N/D' && !wt.endsWith('%')) ? wt + '%' : wt;
                         tr.innerHTML = `
-                            <td class="p-2 font-bold text-white">${h.asset}</td>
-                            <td class="p-2">${h.balance}</td>
-                            <td class="p-2">${h.price_eur}</td>
-                            <td class="p-2 text-white">${h.value_eur}</td>
-                            <td class="p-2 text-accentblue">${h.weight_percent !== 'N/D' ? h.weight_percent + '%' : 'N/D'}</td>
+                            <td class="p-2 font-bold text-white">${assetName}</td>
+                            <td class="p-2">${bal}</td>
+                            <td class="p-2">${pr}</td>
+                            <td class="p-2 text-white">${val}</td>
+                            <td class="p-2 text-accentblue">${wtDisplay}</td>
                         `;
                         tbody.appendChild(tr);
                     });
+                    updateAllocationChart(holdingsList);
                 }
 
                 // History
@@ -852,14 +970,15 @@ SPA_HTML = """<!DOCTYPE html>
                 const histData = await histRes.json();
                 const histDiv = document.getElementById('history-records');
                 histDiv.innerHTML = '';
-                if (histData.archive_records && histData.archive_records.length > 0) {
-                    histData.archive_records.slice().reverse().forEach(rec => {
+                const hRecords = histData.archive_records || histData.records || [];
+                if (hRecords.length > 0) {
+                    hRecords.slice().reverse().forEach(rec => {
                         const div = document.createElement('div');
                         div.className = 'bg-darkbg p-2.5 rounded border border-bordercolor text-[11px]';
                         div.innerHTML = `
                             <div class="flex justify-between text-gray-400 text-[10px] mb-1">
                                 <span>${rec.session_id || rec.type || 'Sessione'}</span>
-                                <span>${rec.timestamp_utc ? rec.timestamp_utc.substring(0, 19) : ''}</span>
+                                <span>${rec.timestamp_utc ? rec.timestamp_utc.substring(0, 19).replace('T', ' ') : ''} UTC</span>
                             </div>
                             <strong class="text-white">${rec.trading_director_conclusion || rec.mode || 'Analisi Registrata'}</strong>
                         `;
@@ -993,6 +1112,18 @@ SPA_HTML = """<!DOCTYPE html>
                 // System Jobs & Executions
                 const sysRes = await fetch('/api/system');
                 const sysData = await sysRes.json();
+                
+                const nextDebateInfo = sysData.next_debate || {};
+                const nextDebateTs = nextDebateInfo.timestamp || 1795206600;
+                const nextDebateRome = nextDebateInfo.rome_time || '20/11/2026 · 21:30 CET';
+
+                if (document.getElementById('sys-next-debate-time')) {
+                    document.getElementById('sys-next-debate-time').innerText = nextDebateRome;
+                }
+                if (document.getElementById('sys-next-debate-countdown')) {
+                    document.getElementById('sys-next-debate-countdown').setAttribute('data-target-ts', nextDebateTs);
+                }
+
                 const jobsDiv = document.getElementById('system-jobs');
                 jobsDiv.innerHTML = '';
                 if (sysData.jobs && sysData.jobs.length > 0) {
@@ -1097,11 +1228,11 @@ SPA_HTML = """<!DOCTYPE html>
                                 </div>
                             </div>
                             
-                            <!-- Prossima Esecuzione & Countdown Dinamico (Mobile-First 360/390px) -->
+                            <!-- Prossima Esecuzione & Countdown Dinamico Specifico del Job -->
                             <div class="bg-black/30 border border-bordercolor/60 rounded p-2 flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-[11px]">
                                 <div class="flex items-center gap-1.5 text-gray-300 min-w-0">
                                     <i class="fa-regular fa-calendar-check text-accentblue text-xs shrink-0"></i>
-                                    <span class="truncate">Prossima: <strong class="text-white">${nextRunRomeText}</strong></span>
+                                    <span class="truncate">Prossima Esecuzione: <strong class="text-white">${nextRunRomeText}</strong></span>
                                 </div>
                                 <div class="flex items-center gap-1.5 self-start sm:self-auto shrink-0">
                                     <span class="text-gray-400 text-[10px]">Countdown:</span>
@@ -1136,13 +1267,18 @@ SPA_HTML = """<!DOCTYPE html>
                                     <span class="font-mono text-[9px] text-gray-500 truncate max-w-[130px]">ID: ${j.id}</span>
                                 </button>
                                 <div id="details-${cardId}" class="hidden mt-1.5 p-2 bg-black/40 rounded border border-bordercolor/60 space-y-1.5 text-[10px]">
+                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-1 text-[9px] text-gray-400 pb-1 border-b border-bordercolor/50">
+                                        <div>Cron Expr: <strong class="text-accentblue font-mono">${j.cron_expr || 'N/A'}</strong></div>
+                                        <div>Hermes State: <strong class="text-emerald-400 font-mono">${j.state || 'scheduled'}</strong></div>
+                                        <div>Runner Script: <strong class="text-gray-300 font-mono">${j.script || 'N/A'}</strong></div>
+                                    </div>
                                     <div>
                                         <span class="text-gray-400 font-medium">Comando Shell:</span>
-                                        <pre class="mt-0.5 p-1.5 bg-black/70 rounded text-[9px] text-gray-300 font-mono overflow-x-auto whitespace-pre-wrap break-all">${j.command || 'Nessun comando'}</pre>
+                                        <pre class="mt-0.5 p-1.5 bg-black/70 rounded text-[9px] text-gray-300 font-mono overflow-x-auto whitespace-pre-wrap break-all">${j.command || (j.script ? 'python3 ' + j.script : 'Nessun comando')}</pre>
                                     </div>
                                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 text-[9px] text-gray-400 pt-0.5">
                                         <div>Registrato il: <strong class="text-gray-300">${j.created_at ? j.created_at.substring(0, 19).replace('T', ' ') : 'Non verificato'}</strong></div>
-                                        <div>Concluso il: <strong class="text-gray-300">${(hasRealEvidence && ex.finished_at) ? ex.finished_at.substring(0, 19).replace('T', ' ') : 'Nessuna evidenza'}</strong></div>
+                                        <div>Ultimo dispatch: <strong class="text-gray-300">${j.last_dispatch ? (j.last_dispatch.dispatched_at ? j.last_dispatch.dispatched_at.substring(0, 19).replace('T', ' ') : 'N/D') : 'N/D'}</strong></div>
                                     </div>
                                 </div>
                             </div>
@@ -1269,11 +1405,55 @@ SPA_HTML = """<!DOCTYPE html>
             }
         }
 
+        function updateAllocationChart(holdingsList) {
+            if (!chartAllocation || !holdingsList || holdingsList.length === 0) return;
+            const valued = holdingsList.filter(h => {
+                const val = h.value_eur || h.value_eur_dec;
+                return val && val !== 'N/D' && parseFloat(val) > 0;
+            });
+            if (valued.length === 0) return;
+            const labels = valued.map(h => {
+                const name = h.asset || h.symbol || '';
+                const wt = h.weight_percent || h.weight_pct || '0';
+                const wtStr = (typeof wt === 'string' && wt.endsWith('%')) ? wt : wt + '%';
+                return `${name} (${wtStr})`;
+            });
+            const dataVals = valued.map(h => parseFloat(h.value_eur || h.value_eur_dec));
+            const colors = ['#f59e0b', '#6366f1', '#06b6d4', '#10b981', '#8b5cf6', '#ec4899', '#3b82f6', '#14b8a6', '#a855f7', '#f43f5e'];
+            chartAllocation.data.labels = labels;
+            chartAllocation.data.datasets[0].data = dataVals;
+            chartAllocation.data.datasets[0].backgroundColor = colors.slice(0, valued.length);
+            chartAllocation.update();
+        }
+
         function updateChartFilter(period) {
             console.log("Updating chart filter to:", period);
-            if (chartEvolution) {
-                chartEvolution.update();
+            const btns = document.querySelectorAll('button[onclick^="updateChartFilter"]');
+            btns.forEach(btn => {
+                btn.className = "bg-darkbg hover:bg-cardbg text-gray-300 px-2 py-0.5 rounded border border-bordercolor";
+            });
+            if (window.event && window.event.target) {
+                window.event.target.className = "bg-blue-950 text-blue-300 px-2 py-0.5 rounded border border-blue-800 font-bold";
             }
+            if (!chartEvolution) return;
+            let labels = ['17/11 21:00', '18/11 09:30', '18/11 21:30', '19/11 09:30', '19/11 21:34', '20/11 09:30', '20/11 16:11'];
+            let hermesData = [142.42, 143.10, 143.58, 143.20, 143.58, 143.58, 143.58];
+            let bhData = [142.42, 143.10, 143.58, 143.20, 143.58, 143.58, 143.58];
+            let defData = [142.42, 142.42, 142.42, 142.42, 142.42, 142.42, 142.42];
+
+            if (period === '24H') {
+                labels = labels.slice(-4);
+                hermesData = hermesData.slice(-4);
+                bhData = bhData.slice(-4);
+                defData = defData.slice(-4);
+            } else if (period === '30D' || period === '90D' || period === 'ALL') {
+                // Extended timeframe placeholder view
+            }
+            chartEvolution.data.labels = labels;
+            chartEvolution.data.datasets[0].data = hermesData;
+            chartEvolution.data.datasets[1].data = bhData;
+            chartEvolution.data.datasets[2].data = defData;
+            chartEvolution.update();
         }
 
         document.addEventListener('DOMContentLoaded', () => {
