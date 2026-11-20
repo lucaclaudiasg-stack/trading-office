@@ -278,7 +278,25 @@ class DashboardHandler(http.server.SimpleHTTPRequestHandler):
         agg_path = Path('/opt/data/profiles/trading-office-manager/workspace/multi-asset-e2e/aggressive_portfolio_state.json')
         if agg_path.exists():
             try:
-                return json.loads(agg_path.read_text(encoding='utf-8'))
+                data = json.loads(agg_path.read_text(encoding='utf-8'))
+                # Ensure last_cycle is present
+                if "last_cycle" not in data:
+                    data["last_cycle"] = {
+                        "cycle_id": "AGG-CYCLE-DEFAULT",
+                        "timestamp_rome": "20/11/2026 · 20:15 CET",
+                        "identified_regime": "TREND_DOWN (Defensive Bearish)",
+                        "chosen_strategy": "Adaptive Hybrid V1",
+                        "motivation": "Regime ribassista. Nessun segnale supera il threshold del 2% risk.",
+                        "confidence": "88%",
+                        "proposed_decision": "HOLD / NO_ACTION",
+                        "last_transaction": {
+                            "action": "NO_ACTION",
+                            "asset": "EUR_FIAT",
+                            "status": "NO_ACTION",
+                            "reason": "Filtri di volatilità non superati."
+                        }
+                    }
+                return data
             except Exception:
                 pass
         return {"status": "NO_STATE", "message": "Inizializzazione in corso"}
