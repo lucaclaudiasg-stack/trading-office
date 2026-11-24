@@ -6622,5 +6622,147 @@
       "real_trading": "DISABLED",
       "coinbase_mcp": "READ_ONLY"
     }
+  },
+  {
+    "session_id": "MASTER-LIVE-SCORE-1795533000",
+    "timestamp_utc": "2026-11-24T15:10:00.351744+00:00",
+    "mode": "score",
+    "methodology": "MASTER_DIRECTIVE_V1_LIVE_QUERIES",
+    "regime": "TREND_DOWN",
+    "candidates": [
+      {
+        "symbol": "BTC-EUR",
+        "score": 82,
+        "live_price_eur": 57002.67,
+        "price_timestamp": "2026-11-24T15:10:00.351744+00:00",
+        "regime": "TREND_DOWN",
+        "strategies": {
+          "A_VOLATILITY_BREAKOUT": {
+            "status": "INACTIVE",
+            "bias": "DEFENSIVE_HOLD"
+          },
+          "B_TREND_FOLLOWING": {
+            "status": "INACTIVE",
+            "bias": "DEFENSIVE_HOLD"
+          },
+          "C_MEAN_REVERSION": {
+            "status": "ACTIVE",
+            "bias": "ACCUMULATE_STUDY"
+          },
+          "D_RELATIVE_STRENGTH_ROTATION": {
+            "status": "CANDIDATE",
+            "bias": "FAVOR_BTC"
+          },
+          "E_DEFENSIVE_CASH": {
+            "status": "ACTIVE",
+            "bias": "MAX_CASH_PRESERVATION"
+          },
+          "F_CROSS_ASSET_CURRENCY_ROTATION": {
+            "status": "CANDIDATE",
+            "bias": "DIRECT_EUR_ONLY"
+          }
+        },
+        "costs": {
+          "total_hurdle_pct": "1.40",
+          "breakeven_gain_eur": "0.84",
+          "hurdle_cleared": false
+        },
+        "bear_counter_thesis": "Regime ribassista; cautela sugli ingressi.",
+        "trading_director_verdict": "HOLD / NO_TRADE_EXECUTION_PERMITTED"
+      },
+      {
+        "symbol": "ETH-EUR",
+        "score": 79,
+        "live_price_eur": 1595.87,
+        "price_timestamp": "2026-11-24T15:10:00.351744+00:00",
+        "regime": "TREND_DOWN",
+        "strategies": {
+          "A_VOLATILITY_BREAKOUT": {
+            "status": "INACTIVE",
+            "bias": "DEFENSIVE_HOLD"
+          },
+          "B_TREND_FOLLOWING": {
+            "status": "INACTIVE",
+            "bias": "DEFENSIVE_HOLD"
+          },
+          "C_MEAN_REVERSION": {
+            "status": "ACTIVE",
+            "bias": "ACCUMULATE_STUDY"
+          },
+          "D_RELATIVE_STRENGTH_ROTATION": {
+            "status": "CANDIDATE",
+            "bias": "FAVOR_BTC"
+          },
+          "E_DEFENSIVE_CASH": {
+            "status": "ACTIVE",
+            "bias": "MAX_CASH_PRESERVATION"
+          },
+          "F_CROSS_ASSET_CURRENCY_ROTATION": {
+            "status": "CANDIDATE",
+            "bias": "DIRECT_EUR_ONLY"
+          }
+        },
+        "costs": {
+          "total_hurdle_pct": "1.40",
+          "breakeven_gain_eur": "0.84",
+          "hurdle_cleared": false
+        },
+        "bear_counter_thesis": "Regime ribassista; cautela sugli ingressi.",
+        "trading_director_verdict": "HOLD / NO_TRADE_EXECUTION_PERMITTED"
+      },
+      {
+        "symbol": "LINK-EUR",
+        "score": 74,
+        "live_price_eur": 11.2,
+        "price_timestamp": "2026-11-24T15:10:00.351744+00:00",
+        "regime": "TREND_DOWN",
+        "strategies": {
+          "A_VOLATILITY_BREAKOUT": {
+            "status": "INACTIVE",
+            "bias": "DEFENSIVE_HOLD"
+          },
+          "B_TREND_FOLLOWING": {
+            "status": "INACTIVE",
+            "bias": "DEFENSIVE_HOLD"
+          },
+          "C_MEAN_REVERSION": {
+            "status": "INACTIVE",
+            "bias": "ACCUMULATE_STUDY"
+          },
+          "D_RELATIVE_STRENGTH_ROTATION": {
+            "status": "CANDIDATE",
+            "bias": "FAVOR_BTC"
+          },
+          "E_DEFENSIVE_CASH": {
+            "status": "ACTIVE",
+            "bias": "MAX_CASH_PRESERVATION"
+          },
+          "F_CROSS_ASSET_CURRENCY_ROTATION": {
+            "status": "CANDIDATE",
+            "bias": "DIRECT_EUR_ONLY"
+          }
+        },
+        "costs": {
+          "total_hurdle_pct": "1.40",
+          "breakeven_gain_eur": "0.84",
+          "hurdle_cleared": false
+        },
+        "bear_counter_thesis": "Regime ribassista; cautela sugli ingressi.",
+        "trading_director_verdict": "HOLD / NO_TRADE_EXECUTION_PERMITTED"
+      }
+    ],
+    "economic_assessment": {
+      "reference_capital_eur": "142.42",
+      "weekly_target_eur": "+5.00 EUR netti (minimo desiderato)",
+      "weekly_risk_budget_eur": "-3.00 EUR max",
+      "current_week_theoretical_pnl_eur": "0.00 EUR (Capitale protetto)",
+      "target_status": "DEFENSIVE_HOLD_ACTIVE"
+    },
+    "security": {
+      "risk_engine": "DENY",
+      "paper_trading": "DISABLED",
+      "real_trading": "DISABLED",
+      "coinbase_mcp": "READ_ONLY"
+    }
   }
 ]
