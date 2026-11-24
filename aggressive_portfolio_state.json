@@ -1,7 +1,7 @@
 {
   "portfolio_name": "HERMES AGGRESSIVE",
-  "updated_at_utc": "2026-11-24T12:44:04.998873+00:00",
-  "updated_at_rome": "24/11/2026 \u00b7 13:44 CET",
+  "updated_at_utc": "2026-11-24T13:22:35.209585+00:00",
+  "updated_at_rome": "24/11/2026 \u00b7 14:22 CET",
   "reference_capital_eur": "142.42",
   "previous_ref_snapshot_eur": "143.58",
   "current_val_eur": "137.36",
@@ -77,8 +77,8 @@
     "time_to_ruin_estimate": "Infinito / Capitale Integro"
   },
   "last_cycle": {
-    "cycle_id": "AGG-MTM-1795524244",
-    "timestamp_rome": "24/11/2026 \u00b7 13:44 CET",
+    "cycle_id": "AGG-MTM-1795526555",
+    "timestamp_rome": "24/11/2026 \u00b7 14:22 CET",
     "market_dataset": "Coinbase Public Spot Ticker (Sanitized Mark-To-Market)",
     "identified_regime": "TREND_DOWN (Defensive Bearish)",
     "chosen_strategy": "Adaptive Hybrid V1",
@@ -92,7 +92,7 @@
       "simulated_price": "N/D",
       "fees_eur": "0.00",
       "slippage_eur": "0.00",
-      "timestamp_rome": "24/11/2026 \u00b7 13:44 CET",
+      "timestamp_rome": "24/11/2026 \u00b7 14:22 CET",
       "status": "NO_ACTION",
       "reason": "Mark-to-market automatico senza transazioni."
     }
