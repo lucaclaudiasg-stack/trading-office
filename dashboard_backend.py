@@ -1,3 +1,4 @@
+import mark_to_market_engine
 import committee_endpoints
 """
 Trading Office Dashboard - Lightweight Read-Only Backend & Frontend Server.
@@ -397,12 +398,8 @@ class DashboardHandler(http.server.SimpleHTTPRequestHandler):
         return {"decisions": [], "transactions": [], "total_decisions": 0, "total_transactions": 0}
 
     def get_shadow_summary(self):
-        if SHADOW_STATE.exists():
-            try:
-                return json.loads(SHADOW_STATE.read_text(encoding='utf-8'))
-            except Exception:
-                pass
-        return {"status": "NOT_INITIALIZED"}
+        mtm = mark_to_market_engine.update_mark_to_market()
+        return mtm
 
     def get_shadow_ledger(self):
         if SHADOW_STATE.exists():
@@ -512,10 +509,10 @@ SPA_HTML = """<!DOCTYPE html>
                     <span class="text-[10px] bg-emerald-950 text-emerald-300 px-2 py-0.5 rounded">Riconciliato PASS</span>
                 </div>
                 <div class="flex justify-between items-end">
-                    <h2 id="ov-val-partial" class="text-2xl font-bold text-white">143.58 EUR</h2>
+                    <h2 id="ov-val-partial" class="text-2xl font-bold text-white">€137.40 EUR</h2>
                     <span class="text-xs text-gray-400 font-mono">Ref. 142.42 EUR</span>
                 </div>
-                <p class="text-[11px] text-gray-400">Capitale di riferimento iniziale: <strong class="text-white">142.42 EUR</strong> (stabilito il 17/11/2026). Il valore parziale corrente (143.58 EUR) riflette la rivalutazione live dei saldi attivi (esclusi ENJ, RLY, CLV).</p>
+                <p class="text-[11px] text-gray-400">Capitale di riferimento: <strong class="text-white">142.42 EUR</strong>. Valore di riferimento 18/11: <strong class="text-gray-300">143.58 EUR</strong>. Il valore corrente di <strong>€137.40 EUR</strong> riflette il mark-to-market continuo sui prezzi spot live (Variazione dal 18/11: <strong class="text-red-400">-€6.18 / -4.30%</strong>).</p>
                 <div class="text-[10px] text-gray-400 pt-1 border-t border-bordercolor/60 flex justify-between">
                     <span>Aggiornato: <strong class="text-white">19/11/2026 · 20:36 CET</strong></span>
                     <span class="text-accentgreen font-medium">Aggiornato 1h fa (AGGIORNATO)</span>

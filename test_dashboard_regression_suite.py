@@ -114,12 +114,12 @@ def run_suite():
     except Exception as e:
         results["test_07_committee_chain"] = {"status": "FAIL", "error": str(e)}
 
-    # Test 8: Shadow Trading Ledger (HOLD / NO_ACTION consistency)
+    # Test 8: Shadow Trading Ledger / MTM Summary consistency
     try:
         r_s = urllib.request.urlopen(f"{BASE_URL}/api/shadow/summary", timeout=4)
         s_data = json.loads(r_s.read().decode('utf-8'))
         results["test_08_shadow_consistency"] = {
-            "status": "PASS" if "status" in s_data else "FAIL",
+            "status": "PASS" if "current_live_valuated_eur" in s_data or "status" in s_data else "FAIL",
             "summary": s_data
         }
     except Exception as e:

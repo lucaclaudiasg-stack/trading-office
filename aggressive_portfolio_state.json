@@ -1,22 +1,47 @@
 {
   "portfolio_name": "HERMES AGGRESSIVE",
-  "created_at_rome": "20/11/2026 \u00b7 20:15 CET",
+  "updated_at_utc": "2026-11-24T12:44:04.998873+00:00",
+  "updated_at_rome": "24/11/2026 \u00b7 13:44 CET",
   "reference_capital_eur": "142.42",
-  "initial_partial_val_eur": "143.58",
-  "current_val_eur": "143.58",
+  "previous_ref_snapshot_eur": "143.58",
+  "current_val_eur": "137.36",
+  "pnl_net_eur": "-5.06",
+  "pnl_net_pct": "-3.55%",
+  "variation_vs_18nov": "-6.22 (-4.33%)",
   "cash_eur": "2.53",
+  "holdings": {
+    "BTC": {
+      "balance": "0.00181225",
+      "price_eur": "54920.00",
+      "value_eur": "99.53"
+    },
+    "ETH": {
+      "balance": "0.02084170",
+      "price_eur": "1545.00",
+      "value_eur": "32.20"
+    },
+    "XLM": {
+      "balance": "26.468",
+      "price_eur": "0.12",
+      "value_eur": "3.04"
+    },
+    "GRT": {
+      "balance": "3.957",
+      "price_eur": "0.02",
+      "value_eur": "0.06"
+    }
+  },
   "metrics": {
-    "pnl_eur": "+1.16",
-    "pnl_pct": "+0.81%",
+    "pnl_eur": "-5.06",
+    "pnl_pct": "-3.55%",
     "max_drawdown_pct": "0.00%",
     "cumulative_fees_eur": "0.00",
     "total_trades": 0,
-    "win_rate_pct": "N/D",
-    "virtual_exposure_pct": "98.24%"
+    "virtual_exposure_pct": "98.16%"
   },
   "ruin_analysis": {
     "initial_capital_eur": "142.42",
-    "current_capital_eur": "143.58",
+    "current_capital_eur": "137.36",
     "ruin_thresholds": {
       "loss_10_pct": {
         "threshold_eur": "128.18",
@@ -51,223 +76,14 @@
     },
     "time_to_ruin_estimate": "Infinito / Capitale Integro"
   },
-  "history": [
-    {
-      "cycle_id": "AGG-CYCLE-1795201144",
-      "timestamp_rome": "20/11/2026 \u00b7 19:59 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    },
-    {
-      "cycle_id": "AGG-CYCLE-1795205023",
-      "timestamp_rome": "20/11/2026 \u00b7 21:03 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    },
-    {
-      "cycle_id": "AGG-CYCLE-1795205505",
-      "timestamp_rome": "20/11/2026 \u00b7 21:11 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    },
-    {
-      "cycle_id": "AGG-CYCLE-1795205510",
-      "timestamp_rome": "20/11/2026 \u00b7 21:11 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    },
-    {
-      "cycle_id": "AGG-CYCLE-1795230000",
-      "timestamp_rome": "21/11/2026 \u00b7 04:00 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    },
-    {
-      "cycle_id": "AGG-CYCLE-1795244400",
-      "timestamp_rome": "21/11/2026 \u00b7 08:00 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    },
-    {
-      "cycle_id": "AGG-CYCLE-1795258860",
-      "timestamp_rome": "21/11/2026 \u00b7 12:01 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    },
-    {
-      "cycle_id": "AGG-CYCLE-1795273260",
-      "timestamp_rome": "21/11/2026 \u00b7 16:01 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    },
-    {
-      "cycle_id": "AGG-CYCLE-1795287600",
-      "timestamp_rome": "21/11/2026 \u00b7 20:00 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    },
-    {
-      "cycle_id": "AGG-CYCLE-1795302060",
-      "timestamp_rome": "22/11/2026 \u00b7 00:01 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    },
-    {
-      "cycle_id": "AGG-CYCLE-1795316460",
-      "timestamp_rome": "22/11/2026 \u00b7 04:01 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    },
-    {
-      "cycle_id": "AGG-CYCLE-1795330800",
-      "timestamp_rome": "22/11/2026 \u00b7 08:00 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    },
-    {
-      "cycle_id": "AGG-CYCLE-1795345200",
-      "timestamp_rome": "22/11/2026 \u00b7 12:00 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    },
-    {
-      "cycle_id": "AGG-CYCLE-1795359600",
-      "timestamp_rome": "22/11/2026 \u00b7 16:00 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    },
-    {
-      "cycle_id": "AGG-CYCLE-1795374060",
-      "timestamp_rome": "22/11/2026 \u00b7 20:01 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    },
-    {
-      "cycle_id": "AGG-CYCLE-1795388460",
-      "timestamp_rome": "23/11/2026 \u00b7 00:01 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    },
-    {
-      "cycle_id": "AGG-CYCLE-1795402800",
-      "timestamp_rome": "23/11/2026 \u00b7 04:00 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    },
-    {
-      "cycle_id": "AGG-CYCLE-1795417200",
-      "timestamp_rome": "23/11/2026 \u00b7 08:00 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    },
-    {
-      "cycle_id": "AGG-CYCLE-1795431660",
-      "timestamp_rome": "23/11/2026 \u00b7 12:01 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    },
-    {
-      "cycle_id": "AGG-CYCLE-1795446000",
-      "timestamp_rome": "23/11/2026 \u00b7 16:00 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    },
-    {
-      "cycle_id": "AGG-CYCLE-1795460400",
-      "timestamp_rome": "23/11/2026 \u00b7 20:00 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    },
-    {
-      "cycle_id": "AGG-CYCLE-1795474800",
-      "timestamp_rome": "24/11/2026 \u00b7 00:00 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    },
-    {
-      "cycle_id": "AGG-CYCLE-1795489260",
-      "timestamp_rome": "24/11/2026 \u00b7 04:01 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    },
-    {
-      "cycle_id": "AGG-CYCLE-1795503660",
-      "timestamp_rome": "24/11/2026 \u00b7 08:01 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    },
-    {
-      "cycle_id": "AGG-CYCLE-1795518000",
-      "timestamp_rome": "24/11/2026 \u00b7 12:00 CET",
-      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-      "action": "HOLD / NO_ACTION",
-      "status": "COMPLETED_ISOLATED"
-    }
-  ],
   "last_cycle": {
-    "cycle_id": "AGG-CYCLE-1795518000",
-    "timestamp_rome": "24/11/2026 \u00b7 12:00 CET",
-    "market_dataset": "Coinbase Public Spot Ticker (Sanitized)",
+    "cycle_id": "AGG-MTM-1795524244",
+    "timestamp_rome": "24/11/2026 \u00b7 13:44 CET",
+    "market_dataset": "Coinbase Public Spot Ticker (Sanitized Mark-To-Market)",
     "identified_regime": "TREND_DOWN (Defensive Bearish)",
-    "evaluated_strategies": [
-      {
-        "name": "Volatility Breakout",
-        "status": "REJECTED",
-        "reason": "Volatilit\u00e0 compressa sotto bande inferiori, breakout asimmetrico sfavorevole."
-      },
-      {
-        "name": "Momentum Multi-Timeframe",
-        "status": "REJECTED",
-        "reason": "Momentum negativo su 1h/4h/24h; rischio elevato di falling knife."
-      },
-      {
-        "name": "Aggressive Trend Following",
-        "status": "REJECTED",
-        "reason": "Trend ribassista strutturale, assenza di conferme volumetriche rialziste."
-      },
-      {
-        "name": "Mean Reversion Selettiva",
-        "status": "REJECTED",
-        "reason": "Rischio/rendimento negativo rispetto allo spread e alla taker fee."
-      },
-      {
-        "name": "Relative Strength Rotation",
-        "status": "REJECTED",
-        "reason": "Correlazione sincrona al ribasso su BTC ed ETH; nessun edge da rotazione altcoin."
-      },
-      {
-        "name": "Adaptive Hybrid V1",
-        "status": "FAVORED",
-        "reason": "Mantenimento selettivo delle posizioni esistenti con blocco nuovi ingressi a rischio."
-      }
-    ],
-    "chosen_strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
-    "motivation": "Regime TREND_DOWN ad alta volatilit\u00e0. Nessun segnale supera il threshold del 2% risk/trade con aspettativa positiva. Mantenimento delle posizioni correnti a preservazione del capitale.",
-    "confidence": "88% (Calibrata su volatilit\u00e0 4h)",
+    "chosen_strategy": "Adaptive Hybrid V1",
+    "motivation": "Valorizzazione Mark-To-Market continua sui prezzi spot live. Mantenimento posizioni invariate.",
+    "confidence": "88%",
     "proposed_decision": "HOLD / NO_ACTION",
     "last_transaction": {
       "action": "NO_ACTION",
@@ -276,10 +92,9 @@
       "simulated_price": "N/D",
       "fees_eur": "0.00",
       "slippage_eur": "0.00",
-      "timestamp_rome": "24/11/2026 \u00b7 12:00 CET",
+      "timestamp_rome": "24/11/2026 \u00b7 13:44 CET",
       "status": "NO_ACTION",
-      "reason": "Condizioni di ingresso non soddisfatte dai filtri di volatilit\u00e0.",
-      "ledger_event_id": "EVT-AGG-1795518000"
+      "reason": "Mark-to-market automatico senza transazioni."
     }
   }
 }
