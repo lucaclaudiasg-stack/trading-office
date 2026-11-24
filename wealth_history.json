@@ -1,0 +1,130 @@
+[
+  {
+    "snapshot_id": "WEALTH-SNAP-1795523659",
+    "timestamp_utc": "2026-11-24T12:34:19.441935+00:00",
+    "timestamp_rome": "24/11/2026 \u00b7 13:34 CET",
+    "total_valuated_eur": "137.40",
+    "previous_ref_val_eur": "143.58",
+    "variation_24h_eur": "-6.18",
+    "variation_24h_pct": "-4.30%",
+    "variation_7d_eur": "+1.16",
+    "variation_7d_pct": "+0.81%",
+    "variation_30d_eur": "+1.16",
+    "variation_30d_pct": "+0.81%",
+    "top_contributor": "BTC (+0.00 EUR)",
+    "valuation_coverage": "10/13 asset (5 valorizzati)",
+    "data_freshness": "AGGIORNATO (LIVE)",
+    "coinbase_connection_status": "READ_ONLY_ACTIVE",
+    "asset_breakdown": [
+      {
+        "asset": "EUR",
+        "balance": "2.53",
+        "price_eur": "1.00",
+        "value_eur": "2.53",
+        "pair": "EUR (Base)",
+        "status": "VERIFIED_LIVE",
+        "weight_pct": "1.84%"
+      },
+      {
+        "asset": "BTC",
+        "balance": "0.00181225",
+        "price_eur": "54925.57",
+        "value_eur": "99.54",
+        "pair": "BTC-EUR",
+        "status": "VERIFIED_LIVE",
+        "weight_pct": "72.45%"
+      },
+      {
+        "asset": "ETH",
+        "balance": "0.02084170",
+        "price_eur": "1545.85",
+        "value_eur": "32.22",
+        "pair": "ETH-EUR",
+        "status": "VERIFIED_LIVE",
+        "weight_pct": "23.45%"
+      },
+      {
+        "asset": "XLM",
+        "balance": "26.468",
+        "price_eur": "0.12",
+        "value_eur": "3.05",
+        "pair": "XLM-EUR",
+        "status": "VERIFIED_LIVE",
+        "weight_pct": "2.22%"
+      },
+      {
+        "asset": "GRT",
+        "balance": "3.957",
+        "price_eur": "0.01",
+        "value_eur": "0.06",
+        "pair": "GRT-EUR",
+        "status": "VERIFIED_LIVE",
+        "weight_pct": "0.04%"
+      },
+      {
+        "asset": "FET",
+        "balance": "3.50",
+        "price_eur": "N/D",
+        "value_eur": "N/D",
+        "weight_pct": "N/D",
+        "status": "VALUATION_UNAVAILABLE"
+      },
+      {
+        "asset": "AMP",
+        "balance": "100.0",
+        "price_eur": "N/D",
+        "value_eur": "N/D",
+        "weight_pct": "N/D",
+        "status": "VALUATION_UNAVAILABLE"
+      },
+      {
+        "asset": "NKN",
+        "balance": "12.0",
+        "price_eur": "N/D",
+        "value_eur": "N/D",
+        "weight_pct": "N/D",
+        "status": "VALUATION_UNAVAILABLE"
+      },
+      {
+        "asset": "ENJ",
+        "balance": "5.0",
+        "price_eur": "N/D",
+        "value_eur": "N/D",
+        "weight_pct": "N/D",
+        "status": "VALUATION_UNAVAILABLE"
+      },
+      {
+        "asset": "RLY",
+        "balance": "50.0",
+        "price_eur": "N/D",
+        "value_eur": "N/D",
+        "weight_pct": "N/D",
+        "status": "VALUATION_UNAVAILABLE"
+      },
+      {
+        "asset": "ALEO",
+        "balance": "1.0",
+        "price_eur": "N/D",
+        "value_eur": "N/D",
+        "weight_pct": "N/D",
+        "status": "VALUATION_UNAVAILABLE"
+      },
+      {
+        "asset": "COMP",
+        "balance": "0.01",
+        "price_eur": "N/D",
+        "value_eur": "N/D",
+        "weight_pct": "N/D",
+        "status": "VALUATION_UNAVAILABLE"
+      },
+      {
+        "asset": "CLV",
+        "balance": "10.0",
+        "price_eur": "N/D",
+        "value_eur": "N/D",
+        "weight_pct": "N/D",
+        "status": "VALUATION_UNAVAILABLE"
+      }
+    ]
+  }
+]

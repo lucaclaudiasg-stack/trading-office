@@ -79,11 +79,158 @@
       "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
       "action": "HOLD / NO_ACTION",
       "status": "COMPLETED_ISOLATED"
+    },
+    {
+      "cycle_id": "AGG-CYCLE-1795230000",
+      "timestamp_rome": "21/11/2026 \u00b7 04:00 CET",
+      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
+      "action": "HOLD / NO_ACTION",
+      "status": "COMPLETED_ISOLATED"
+    },
+    {
+      "cycle_id": "AGG-CYCLE-1795244400",
+      "timestamp_rome": "21/11/2026 \u00b7 08:00 CET",
+      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
+      "action": "HOLD / NO_ACTION",
+      "status": "COMPLETED_ISOLATED"
+    },
+    {
+      "cycle_id": "AGG-CYCLE-1795258860",
+      "timestamp_rome": "21/11/2026 \u00b7 12:01 CET",
+      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
+      "action": "HOLD / NO_ACTION",
+      "status": "COMPLETED_ISOLATED"
+    },
+    {
+      "cycle_id": "AGG-CYCLE-1795273260",
+      "timestamp_rome": "21/11/2026 \u00b7 16:01 CET",
+      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
+      "action": "HOLD / NO_ACTION",
+      "status": "COMPLETED_ISOLATED"
+    },
+    {
+      "cycle_id": "AGG-CYCLE-1795287600",
+      "timestamp_rome": "21/11/2026 \u00b7 20:00 CET",
+      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
+      "action": "HOLD / NO_ACTION",
+      "status": "COMPLETED_ISOLATED"
+    },
+    {
+      "cycle_id": "AGG-CYCLE-1795302060",
+      "timestamp_rome": "22/11/2026 \u00b7 00:01 CET",
+      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
+      "action": "HOLD / NO_ACTION",
+      "status": "COMPLETED_ISOLATED"
+    },
+    {
+      "cycle_id": "AGG-CYCLE-1795316460",
+      "timestamp_rome": "22/11/2026 \u00b7 04:01 CET",
+      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
+      "action": "HOLD / NO_ACTION",
+      "status": "COMPLETED_ISOLATED"
+    },
+    {
+      "cycle_id": "AGG-CYCLE-1795330800",
+      "timestamp_rome": "22/11/2026 \u00b7 08:00 CET",
+      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
+      "action": "HOLD / NO_ACTION",
+      "status": "COMPLETED_ISOLATED"
+    },
+    {
+      "cycle_id": "AGG-CYCLE-1795345200",
+      "timestamp_rome": "22/11/2026 \u00b7 12:00 CET",
+      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
+      "action": "HOLD / NO_ACTION",
+      "status": "COMPLETED_ISOLATED"
+    },
+    {
+      "cycle_id": "AGG-CYCLE-1795359600",
+      "timestamp_rome": "22/11/2026 \u00b7 16:00 CET",
+      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
+      "action": "HOLD / NO_ACTION",
+      "status": "COMPLETED_ISOLATED"
+    },
+    {
+      "cycle_id": "AGG-CYCLE-1795374060",
+      "timestamp_rome": "22/11/2026 \u00b7 20:01 CET",
+      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
+      "action": "HOLD / NO_ACTION",
+      "status": "COMPLETED_ISOLATED"
+    },
+    {
+      "cycle_id": "AGG-CYCLE-1795388460",
+      "timestamp_rome": "23/11/2026 \u00b7 00:01 CET",
+      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
+      "action": "HOLD / NO_ACTION",
+      "status": "COMPLETED_ISOLATED"
+    },
+    {
+      "cycle_id": "AGG-CYCLE-1795402800",
+      "timestamp_rome": "23/11/2026 \u00b7 04:00 CET",
+      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
+      "action": "HOLD / NO_ACTION",
+      "status": "COMPLETED_ISOLATED"
+    },
+    {
+      "cycle_id": "AGG-CYCLE-1795417200",
+      "timestamp_rome": "23/11/2026 \u00b7 08:00 CET",
+      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
+      "action": "HOLD / NO_ACTION",
+      "status": "COMPLETED_ISOLATED"
+    },
+    {
+      "cycle_id": "AGG-CYCLE-1795431660",
+      "timestamp_rome": "23/11/2026 \u00b7 12:01 CET",
+      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
+      "action": "HOLD / NO_ACTION",
+      "status": "COMPLETED_ISOLATED"
+    },
+    {
+      "cycle_id": "AGG-CYCLE-1795446000",
+      "timestamp_rome": "23/11/2026 \u00b7 16:00 CET",
+      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
+      "action": "HOLD / NO_ACTION",
+      "status": "COMPLETED_ISOLATED"
+    },
+    {
+      "cycle_id": "AGG-CYCLE-1795460400",
+      "timestamp_rome": "23/11/2026 \u00b7 20:00 CET",
+      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
+      "action": "HOLD / NO_ACTION",
+      "status": "COMPLETED_ISOLATED"
+    },
+    {
+      "cycle_id": "AGG-CYCLE-1795474800",
+      "timestamp_rome": "24/11/2026 \u00b7 00:00 CET",
+      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
+      "action": "HOLD / NO_ACTION",
+      "status": "COMPLETED_ISOLATED"
+    },
+    {
+      "cycle_id": "AGG-CYCLE-1795489260",
+      "timestamp_rome": "24/11/2026 \u00b7 04:01 CET",
+      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
+      "action": "HOLD / NO_ACTION",
+      "status": "COMPLETED_ISOLATED"
+    },
+    {
+      "cycle_id": "AGG-CYCLE-1795503660",
+      "timestamp_rome": "24/11/2026 \u00b7 08:01 CET",
+      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
+      "action": "HOLD / NO_ACTION",
+      "status": "COMPLETED_ISOLATED"
+    },
+    {
+      "cycle_id": "AGG-CYCLE-1795518000",
+      "timestamp_rome": "24/11/2026 \u00b7 12:00 CET",
+      "strategy": "Adaptive Hybrid V1 (Volatility + Relative Strength)",
+      "action": "HOLD / NO_ACTION",
+      "status": "COMPLETED_ISOLATED"
     }
   ],
   "last_cycle": {
-    "cycle_id": "AGG-CYCLE-1795205510",
-    "timestamp_rome": "20/11/2026 \u00b7 21:11 CET",
+    "cycle_id": "AGG-CYCLE-1795518000",
+    "timestamp_rome": "24/11/2026 \u00b7 12:00 CET",
     "market_dataset": "Coinbase Public Spot Ticker (Sanitized)",
     "identified_regime": "TREND_DOWN (Defensive Bearish)",
     "evaluated_strategies": [
@@ -129,10 +276,10 @@
       "simulated_price": "N/D",
       "fees_eur": "0.00",
       "slippage_eur": "0.00",
-      "timestamp_rome": "20/11/2026 \u00b7 21:11 CET",
+      "timestamp_rome": "24/11/2026 \u00b7 12:00 CET",
       "status": "NO_ACTION",
       "reason": "Condizioni di ingresso non soddisfatte dai filtri di volatilit\u00e0.",
-      "ledger_event_id": "EVT-AGG-1795205510"
+      "ledger_event_id": "EVT-AGG-1795518000"
     }
   }
 }

@@ -6,5 +6,20 @@
   "2026-11-20": {
     "morning": true,
     "evening": true
+  },
+  "2026-11-21": {
+    "morning": true,
+    "evening": true
+  },
+  "2026-11-22": {
+    "morning": true,
+    "evening": true
+  },
+  "2026-11-23": {
+    "morning": true,
+    "evening": true
+  },
+  "2026-11-24": {
+    "morning": true
   }
 }
