@@ -1,29 +1,29 @@
 {
   "portfolio_name": "HERMES AGGRESSIVE",
-  "updated_at_utc": "2026-11-24T17:49:58.562867+00:00",
-  "updated_at_rome": "24/11/2026 \u00b7 18:49 CET",
+  "updated_at_utc": "2026-11-24T18:14:27.023614+00:00",
+  "updated_at_rome": "24/11/2026 \u00b7 19:14 CET",
   "reference_capital_eur": "142.42",
   "previous_ref_snapshot_eur": "143.58",
-  "current_val_eur": "137.36",
-  "pnl_net_eur": "-5.06",
-  "pnl_net_pct": "-3.55%",
-  "variation_vs_18nov": "-6.22 (-4.33%)",
+  "current_val_eur": "134.36",
+  "pnl_net_eur": "-8.06",
+  "pnl_net_pct": "-5.66%",
+  "variation_vs_18nov": "-9.22 (-6.42%)",
   "cash_eur": "2.53",
   "holdings": {
     "BTC": {
       "balance": "0.00181225",
-      "price_eur": "54920.00",
-      "value_eur": "99.53"
+      "price_eur": "53689.79",
+      "value_eur": "97.30"
     },
     "ETH": {
       "balance": "0.02084170",
-      "price_eur": "1545.00",
-      "value_eur": "32.20"
+      "price_eur": "1510.39",
+      "value_eur": "31.48"
     },
     "XLM": {
       "balance": "26.468",
-      "price_eur": "0.12",
-      "value_eur": "3.04"
+      "price_eur": "0.11",
+      "value_eur": "2.99"
     },
     "GRT": {
       "balance": "3.957",
@@ -32,8 +32,8 @@
     }
   },
   "metrics": {
-    "pnl_eur": "-5.06",
-    "pnl_pct": "-3.55%",
+    "pnl_eur": "-8.06",
+    "pnl_pct": "-5.66%",
     "max_drawdown_pct": "0.00%",
     "cumulative_fees_eur": "0.00",
     "total_trades": 0,
@@ -41,7 +41,7 @@
   },
   "ruin_analysis": {
     "initial_capital_eur": "142.42",
-    "current_capital_eur": "137.36",
+    "current_capital_eur": "134.36",
     "ruin_thresholds": {
       "loss_10_pct": {
         "threshold_eur": "128.18",
@@ -77,8 +77,8 @@
     "time_to_ruin_estimate": "Infinito / Capitale Integro"
   },
   "last_cycle": {
-    "cycle_id": "AGG-MTM-1795542598",
-    "timestamp_rome": "24/11/2026 \u00b7 18:49 CET",
+    "cycle_id": "AGG-MTM-1795544067",
+    "timestamp_rome": "24/11/2026 \u00b7 19:14 CET",
     "market_dataset": "Coinbase Public Spot Ticker (Sanitized Mark-To-Market)",
     "identified_regime": "TREND_DOWN (Defensive Bearish)",
     "chosen_strategy": "Adaptive Hybrid V1",
@@ -92,7 +92,7 @@
       "simulated_price": "N/D",
       "fees_eur": "0.00",
       "slippage_eur": "0.00",
-      "timestamp_rome": "24/11/2026 \u00b7 18:49 CET",
+      "timestamp_rome": "24/11/2026 \u00b7 19:14 CET",
       "status": "NO_ACTION",
       "reason": "Mark-to-market automatico senza transazioni."
     }
